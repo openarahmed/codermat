@@ -8,7 +8,14 @@ export const metadata: Metadata = {
   title: "CodetMat",
   description: "Your web solution",
   icons: {
-    icon: "/logo1.png",
+    icon: [
+      { url: "https://i.postimg.cc/VsjQSGwd/icon-for-meta.png" }, // Fallback for browsers that prefer .ico
+      {
+        url: "https://i.postimg.cc/VsjQSGwd/icon-for-meta.png",
+        type: "image/png",
+        sizes: "32x32",
+      }, // Modern browsers
+    ],
   },
 };
 

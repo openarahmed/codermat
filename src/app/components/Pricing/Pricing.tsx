@@ -1,52 +1,79 @@
+"use client";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 
 const Pricing = () => {
+  const [currency, setCurrency] = useState("BDT");
+
   const pricingPlans = [
     {
-      title: "Basic",
-      price: 200,
-      description:
-        "Perfect for startups looking to create a strong online presence with a customized website.",
+      title: "Starter",
+      priceBDT: 15000,
+      priceUSD: 200,
       features: [
-        "Custom website",
-        "Up to 7 Information Pages",
-        "Not included in the plan",
-        "~2 weeks to complete",
-        "2 months of free support",
+        "3-5 Pages",
+        "Basic Design",
+        "Mobile Responsive",
+        "Contact Form",
+        "Speed Optimization",
       ],
-      ctaText: "Get started with your online presence today with CoderMat!",
+      ctaText:
+        "Perfect for startups, providing essential features for building a strong and scalable online presence.",
     },
     {
-      title: "Premium",
-      price: 600,
-      description:
-        "Ideal for growing businesses needing advanced functionalities and a larger site.",
+      title: "Business",
+      priceBDT: 30000,
+      priceUSD: 500,
       features: [
-        "Custom designs & animations",
-        "Up to 15 Information Pages",
-        "Includes full blog functionality",
-        "Approximately 4 weeks",
-        "6 months of priority support",
+        "5-10 Pages",
+        "Custom Design",
+        "Basic SEO",
+        "Blog Setup",
+        "Speed Optimization",
       ],
-      ctaText: "Scale your online presence with CoderMat!",
+      ctaText:
+        "Ideal for growing businesses, offering custom design, SEO, and optimization for better online performance.",
       recommended: true,
     },
     {
-      title: "Plus",
-      price: 1000,
-      description:
-        "Comprehensive package for established businesses requiring extensive site features.",
+      title: "Premium",
+      priceBDT: 50000,
+      priceUSD: 1000,
       features: [
-        "Premium designs with animation",
-        "Unlimited pages",
-        "Full blog setup and integration",
-        "Approximately 6 weeks",
-        "1 year of priority support",
+        "Unlimited Pages",
+        "Latest Technology",
+        "E-commerce Integration",
+        "Chatbot Support",
+        "Advanced Analytics",
       ],
-      ctaText: "Achieve complete business growth with CoderMat!",
+      ctaText:
+        "Complete solution for large businesses, offering unlimited pages, advanced features, and full website control.",
     },
   ];
+
+  const formatPrice = (
+    plan:
+      | {
+          title: string;
+          priceBDT: number;
+          priceUSD: number;
+          features: string[];
+          ctaText: string;
+          recommended?: undefined;
+        }
+      | {
+          title: string;
+          priceBDT: number;
+          priceUSD: number;
+          features: string[];
+          ctaText: string;
+          recommended: boolean;
+        }
+  ) => {
+    return currency === "BDT"
+      ? `৳${plan.priceBDT.toLocaleString()}`
+      : `$${plan.priceUSD}`;
+  };
 
   return (
     <div className="py-8 md:py-20 md:mx-auto md:max-w-[1480px] animate-fade-in">
@@ -57,12 +84,20 @@ const Pricing = () => {
         Affordable Plans Customized for Your Business Needs: Select the Right
         Package for Your Success.
       </p>
+      <div className="flex justify-center pt-6">
+        <button
+          onClick={() => setCurrency(currency === "BDT" ? "USD" : "BDT")}
+          className="border border-white px-4 py-2 rounded-xl hover:bg-white hover:text-black transition-all"
+        >
+          Switch to {currency === "BDT" ? "USD" : "BDT"}
+        </button>
+      </div>
       <div className="lg:mx-20 pt-8 md:pt-20 md:px-8 lg:px-0 ">
-        <div className="grid md:mx-auto md:grid-cols-2 lg:grid-cols-3 md:gap-0 md:gap-y-10 gap-y-6 justify-center">
+        <div className="grid md:mx-auto md:grid-cols-2 lg:grid-cols-3 md:gap-8 gap-y-10 justify-center">
           {pricingPlans.map((plan, index) => (
             <div
               key={index}
-              className={`relative grid gap-3 mx-auto bg-[#2D1B38] p-8 rounded-3xl md:w-[350px] md:h-[580px] w-[330px] hover:scale-105 hover:bg-[#1E1227] transition-all duration-300 ${
+              className={`relative grid gap-4 mx-auto bg-gradient-to-br from-[#2D1B38] to-[#1E1227] p-8 rounded-3xl shadow-xl md:w-[360px] w-[330px] hover:scale-105 transition-all duration-300 ${
                 plan.recommended ? "border-t-4 border-[#7D1A8D]" : ""
               }`}
             >
@@ -71,24 +106,23 @@ const Pricing = () => {
                   Recommended
                 </div>
               )}
-              <h1 className="text-base">{plan.title}</h1>
-              <h1>
-                <span className="text-3xl font-bold">${plan.price}</span>/month
+              <h1 className="text-xl font-semibold text-white text-center">
+                {plan.title}
               </h1>
-              <p className="text-[#ffffff4c]">Billed monthly</p>
-              <p>{plan.description}</p>
+              <h2 className="text-center text-3xl font-bold text-white">
+                {formatPrice(plan)}
+              </h2>
+              <p className="text-[#ffffff80] text-center">Billed per project</p>
+              <p className="pt-2 text-[#ffffffa6] italic">{plan.ctaText}</p>
               <div className="grid gap-5">
-                <button className="mb-2 mt-auto border-2 text-lg gap-2 border-[#ffffff5e] bg-gradient-to-r from-[#49156D] to-[#49165C] hover:border-[#a33ed2] hover:from-[#6C00A5] hover:to-[#6A0170] duration-150 px-4 py-2 rounded-xl">
-                  <Link href={`/contactUs`}> Try for free</Link>
+                <button className="mb-2 mt-2 border-2 text-lg gap-2 border-[#ffffff5e] bg-gradient-to-r from-[#49156D] to-[#49165C] hover:border-[#a33ed2] hover:from-[#6C00A5] hover:to-[#6A0170] duration-150 px-4 py-2 rounded-xl">
+                  <Link href={`/contactUs`}> Start Now</Link>
                 </button>
                 <div className="w-full border-t border-dashed border-white"></div>
-                <div className="flex flex-col gap-1">
+                <div className="flex flex-col gap-1 text-white">
                   {plan.features.map((feature, idx) => (
-                    <p key={idx}>
-                      <span className="text-xl font-bold"></span>✔️ {feature}
-                    </p>
+                    <p key={idx}>✔️ {feature}</p>
                   ))}
-                  <p className="pt-2">{plan.ctaText}</p>
                 </div>
               </div>
             </div>

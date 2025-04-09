@@ -19,7 +19,7 @@ const StackCard: React.FC<StackCardProps> = ({ stack }) => {
               alt={""}
               width={24}
               height={24}
-              className="object-cover mr-2"
+              className="object-cover mr-2 rounded-full"
             />
             <p className="text-white">{item.name}</p>
           </div>

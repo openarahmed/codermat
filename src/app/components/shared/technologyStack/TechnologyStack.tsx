@@ -10,23 +10,23 @@ const SkeletonLoader = () => {
       {Array.from({ length: 6 }).map((_, index) => (
         <div
           key={index}
-          className="bg-white/15 h-[400px] rounded-2xl p-6 w-full max-w-[350px] backdrop-blur-lg border-[#72006A] border-2"
+          className="w-[330px] md:w-[300px] h-[400px] backdrop-blur-lg bg-[#0000000f] flex flex-col border-[#72006A] border-2 pt-2 rounded-2xl"
         >
-          <div className="animate-pulse flex flex-col space-y-4">
+          <div className="animate-pulse flex flex-col">
             {/* Stack name */}
-            <div className="h-6 bg-white/20 rounded w-3/4 mx-auto"></div>
+            <div className="h-6 bg-white/20 rounded w-3/4 mx-auto mt-4 mb-2"></div>
 
-            {/* Divider line */}
-            <div className="p-[0.2px] bg-[#ffffff58] mx-10 my-4"></div>
+            {/* Divider line - matches original */}
+            <div className="p-[0.2px] bg-[#ffffff58] mx-10"></div>
 
-            {/* Technologies */}
-            <div className="space-y-3">
-              {Array.from({ length: 3 }).map((_, index) => (
-                <div key={index} className="flex items-center">
+            {/* Technologies - matches original spacing */}
+            <div className="ms-10 my-6 text-sm space-y-4">
+              {Array.from({ length: 5 }).map((_, index) => (
+                <div key={index} className="flex items-center py-1">
                   {/* Skeleton for technology icon */}
                   <div className="h-6 w-6 bg-white/20 rounded-full mr-2"></div>
                   {/* Skeleton for technology name */}
-                  <div className="h-4 bg-white/20 w-3/4 rounded"></div>
+                  <div className="h-4 bg-white/20 w-24 rounded"></div>
                 </div>
               ))}
             </div>

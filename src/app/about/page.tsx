@@ -65,7 +65,7 @@ const AboutUs = () => {
             </p>
 
             {/* Statistics */}
-            <div className="grid grid-cols-2 gap-6 mt-8">
+            {/* <div className="grid grid-cols-2 gap-6 mt-8">
               <div>
                 <h2 className="text-2xl md:text-3xl font-bold">2000</h2>
                 <p>Founded</p>
@@ -82,7 +82,7 @@ const AboutUs = () => {
                 <h2 className="text-2xl md:text-3xl font-bold">$409M</h2>
                 <p>Raised</p>
               </div>
-            </div>
+            </div> */}
           </div>
         </section>
 
