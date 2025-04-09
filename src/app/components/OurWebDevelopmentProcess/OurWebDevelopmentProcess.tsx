@@ -31,7 +31,7 @@ const OurWebDevelopmentProcess = () => {
               />
             </div>
 
-            {/* Step 1 */}
+            {/* Steps 1 */}
             <div className="relative flex items-center mb-5 lg:mb-16 z-10">
               <div className="w-1/2 pr-4 md:pr-20 text-right mt-10">
                 <div className="bg-[#2d1b39] p-2 md:p-6 rounded-lg shadow-lg relative hover:shadow-xl transition-shadow duration-300 md:mt-3 -mt-1 mr-7 md:mr-0 lg:mt-0">
