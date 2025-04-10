@@ -3,7 +3,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 
 const Pricing = () => {
-  const [currency, setCurrency] = useState("BDT");
+  const [currency, setCurrency] = useState("USD");
 
   const pricingPlans = [
     {

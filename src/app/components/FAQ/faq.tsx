@@ -13,29 +13,45 @@ const FAQ = () => {
 
   const faqs = [
     {
-      question: "What does custom web development involve?",
+      question: "How much does a custom website cost?",
       answer:
-        "Custom web development is the process of creating a unique website designed specifically for your business needs. Instead of using pre-made templates, we build everything from the ground up. This includes custom designs, special features, and functionality that fit your brand, target audience, and business goals. It allows your website to stand out from the competition and better serve your users' needs.",
+        "The cost of a custom website varies depending on the complexity and requirements of the project. For a basic website, prices typically start from $1,500, but more advanced websites with custom features and integrations can range from $5,000 to $20,000 or more. We provide a tailored quote based on your specific needs and budget. Please contact us for a free consultation.",
     },
     {
-      question: "How long does it take to build a custom website?",
+      question: "How long does it take to deliver a website?",
       answer:
-        "The time it takes to build a custom website depends on its complexity. For simple websites with basic functionality, it can take around 4-6 weeks. However, for more advanced websites with complex features, integrations, or custom design requirements, it can take anywhere from 3 to 6 months. We'll work closely with you to ensure that we meet your timeline expectations while delivering a high-quality product.",
+        "The timeline for delivering a custom website depends on the scope of the project. Simple websites can typically be delivered within 4-6 weeks. For more complex websites, it may take 3-6 months. We will work with you to define a timeline and keep you updated throughout the process to ensure that we meet your expectations.",
     },
     {
-      question: "What technologies do you use for web development?",
+      question: "What factors affect the price of a custom website?",
       answer:
-        "We use a variety of modern technologies depending on your project's specific needs. For front-end development (what users see and interact with), we often use React and Next.js, which provide fast and dynamic user experiences. For back-end development (where the data and logic work behind the scenes), we may use Node.js, Laravel, or other popular frameworks that are secure, scalable, and reliable. We choose the best tools to ensure your website performs well and is easy to maintain.",
+        "Several factors affect the price of a custom website, including the number of pages, the complexity of the design, custom features (such as e-commerce functionality or user login), integrations with third-party services, and the level of SEO optimization required. The more complex and feature-rich your website needs to be, the higher the cost will be.",
     },
     {
-      question: "Will my website be mobile-friendly?",
+      question:
+        "Do you provide maintenance and updates after the website is launched?",
       answer:
-        "Absolutely! In today's world, most people browse the internet on their phones. We ensure that every website we build is fully responsive, which means it will look great and work well on all devices, including smartphones, tablets, and desktops. This ensures your users have the best possible experience no matter what device they’re using to visit your website.",
+        "Yes, we offer ongoing website maintenance and updates after the launch. This includes software updates, security patches, bug fixes, and content updates. Maintenance plans are available to ensure your website continues to perform optimally and remains up-to-date with the latest technology and security standards.",
     },
     {
-      question: "Do you offer website maintenance after launch?",
+      question: "Do I need to provide content for my website?",
       answer:
-        "Yes, we offer ongoing support and maintenance services after your website is launched. This includes making sure your website stays secure, updating software, fixing any issues that may arise, and making small improvements over time. Regular maintenance helps your website perform well and ensures it stays up-to-date with the latest web technologies and security standards.",
+        "Yes, we will need content for your website, including text, images, and any other media. If you need help with content creation, we can provide copywriting and photography services. We'll work closely with you to ensure that the content aligns with your brand voice and goals.",
+    },
+    {
+      question: "Will my website be SEO-friendly?",
+      answer:
+        "Yes, we build SEO-friendly websites by ensuring that your site is optimized for search engines. This includes proper on-page SEO (such as title tags, meta descriptions, and header tags), fast loading speeds, mobile responsiveness, and clean code. However, ongoing SEO efforts, such as content creation and link-building, may require a separate plan.",
+    },
+    {
+      question: "Can I update my website after it's built?",
+      answer:
+        "Absolutely! We ensure that you have full control over your website after launch. We can provide you with a content management system (CMS) like WordPress or a custom admin panel, which will allow you to make changes, add new content, and manage your site with ease. If you prefer, we can also offer ongoing support for any updates you may need.",
+    },
+    {
+      question: "Do you provide hosting services for websites?",
+      answer:
+        "Yes, we can provide website hosting services. We offer reliable and secure hosting solutions with excellent uptime, fast loading speeds, and regular backups. If you prefer to use a different hosting provider, we can also help you set up your website on your preferred hosting platform.",
     },
   ];
 
@@ -44,7 +60,7 @@ const FAQ = () => {
       <div className="max-w-6xl mx-auto">
         <div className="mb-5 md:mb-14 text-center">
           <h2 className="md:text-3xl text-2xl font-bold ">
-            Frequently asked questions
+            Frequently Asked Questions
           </h2>
           <p className="mt-2 md:mt-4">Got Questions? We've Got Answers!</p>
         </div>

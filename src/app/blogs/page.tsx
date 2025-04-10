@@ -143,7 +143,7 @@ const Blogs = () => {
                   </div>
 
                   {/* Author Details - Aligned at the Bottom */}
-                  <div className="flex items-center gap-4 mt-8">
+                  {/* <div className="flex items-center gap-4 mt-8">
                     <Image
                       className="w-12 h-12 rounded-full object-cover"
                       src="https://i.postimg.cc/6qv5TDS6/1.jpg"
@@ -157,7 +157,7 @@ const Blogs = () => {
                         Jun 27, 2020 • 6 min read
                       </p>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               ))}
             </div>

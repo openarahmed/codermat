@@ -6,19 +6,36 @@ import PrimaryBtn from "../shared/customized-component/PrimaryBtn";
 import Image from "next/image";
 import Link from "next/link";
 
-// Skeleton Loader
 const ProjectCardSkeleton = () => {
   return (
-    <div className="md:w-[390px] md:h-[660px] w-[320px] mx-auto backdrop-blur-md bg-[#2b1d3469] flex flex-col items-start rounded-2xl text-white animate-pulse">
-      <div className="w-full h-[260px] bg-white/20 rounded-t-2xl"></div>
-      <div className="h-8 my-6 bg-white/20 rounded w-3/4 mb-5 mx-4"></div>
+    <div className="w-[330px] lg:w-[380px] h-[600px] md:h-[580px] mx-auto backdrop-blur-md bg-[#2b1d3469] flex flex-col rounded-2xl text-white animate-pulse overflow-hidden">
+      {/* Image skeleton - exact match to original */}
+      <div className="w-full h-[230px] bg-white/20"></div>
 
-      <div className="h-6 bg-white/20 rounded w-1/2 mb-5 mx-4"></div>
-      <div className="h-5 bg-white/20 rounded w-[350px] mb-5 mx-4"></div>
-      <div className="h-5 bg-white/20 rounded w-[350px] mb-5 mx-4"></div>
-      <div className="h-6 bg-white/20 rounded w-1/2 mb-5 mx-4"></div>
-      <div className="h-5 bg-white/20 rounded w-[350px] mb-5 mx-4"></div>
-      <div className="h-12 bg-white/20 rounded w-[130px] mt-auto mb-5 mx-4"></div>
+      {/* Content container - exact padding match */}
+      <div className="p-7 flex flex-col flex-grow">
+        {/* Project name - matches text-xl size */}
+        <div className="h-7 bg-white/20 rounded w-3/4 mb-4"></div>
+
+        {/* Description section */}
+        <div className="mb-5">
+          <div className="h-5 bg-white/20 rounded w-1/3 mb-3"></div>
+          <div className="space-y-2">
+            <div className="h-4 bg-white/20 rounded w-full"></div>
+            <div className="h-4 bg-white/20 rounded w-4/5"></div>
+            <div className="h-4 bg-white/20 rounded w-3/4"></div>
+          </div>
+        </div>
+
+        {/* Technologies section */}
+        <div className="mb-5">
+          <div className="h-5 bg-white/20 rounded w-1/3 mb-3"></div>
+          <div className="h-4 bg-white/20 rounded w-full"></div>
+        </div>
+
+        {/* Button - matches exact position and size */}
+        <div className="mt-auto w-[130px] h-10 bg-white/20 rounded-md ml-[-8px]"></div>
+      </div>
     </div>
   );
 };

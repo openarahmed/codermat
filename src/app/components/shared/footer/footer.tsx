@@ -60,7 +60,7 @@ const Footer = () => {
             </h4>
             <ul>
               <li className="mb-2 underline-animation hover:text-[#acacac] duration-300">
-                <a>FAQ</a>
+                <a href="/faq">FAQ</a>
               </li>
               <li className="mb-2 underline-animation hover:text-[#acacac] duration-300">
                 <a href="/contactUs">Contact</a>
@@ -103,28 +103,23 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          {/* <div className="md:col-span-1 col-span-2">
+          <div>
             <h4 className="text-sm font-semibold mb-4 text-[#5C4F67]">
-              LANGUAGE & CURRENCY
+              CAREER
             </h4>
-            <div className="mb-2">
-              <select className="w-full p-3 bg-transparent border border-[#6461616d] rounded-lg text-white focus:outline-none">
-                <option>English</option>
-              </select>
-            </div>
-            <div>
-              <select className="w-full p-3 bg-transparent border border-[#6461616d] rounded-lg text-white focus:outline-none">
-                <option>USD</option>
-              </select>
-            </div>
-          </div> */}
+            <ul>
+              <li className="mb-2 underline-animation hover:text-[#acacac] duration-300">
+                <a href="/join-team">Join Our Creative Team</a>
+              </li>
+            </ul>
+          </div>
         </div>
 
         <div className="mt-10 text-center border-t border-[#6461616d] pt-6 flex flex-col md:flex-row justify-between items-center pb-7">
           <p className="text-sm order-2 md:order-1 mt-5 md:mt-0">
-            © 2025 <strong>CoderMat</strong>. Crafted with 💜 by creative minds
-            in Bangladesh.
+            © 2025 <strong>CoderMat</strong>. All rights reserved.
           </p>
+
           <div className="mt-4 flex justify-center space-x-6 order-1 md:order-2">
             <a
               href="https://www.facebook.com/codermat"

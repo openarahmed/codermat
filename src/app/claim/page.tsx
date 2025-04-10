@@ -14,7 +14,7 @@ const ClaimForm = () => {
 
   return (
     <section className="py-28 text-white bg-gradient-to-bl from-[#93239d] via-[#190b34] to-[#280d42]">
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-3xl mx-auto">
         <h1 className="text-4xl font-extrabold text-center mb-6">
           Submit a Claim
         </h1>
