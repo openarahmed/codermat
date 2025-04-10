@@ -74,7 +74,6 @@ export default function Navbar() {
               >
                 Home
               </Link>
-
               <div
                 className="relative flex justify-center"
                 onMouseEnter={() => setDropdownOpenTech(true)}
@@ -295,7 +294,6 @@ export default function Navbar() {
                   </div>
                 )}
               </div>
-
               <div
                 className="relative flex justify-center"
                 onMouseEnter={() => setDropdownOpen(true)}
@@ -311,50 +309,34 @@ export default function Navbar() {
                     activeLink === "technologies"
                       ? "bg-white/20 text-white"
                       : "text-white hover:bg-white/20 hover:text-white"
-                  } px-3 py-2 rounded-md  font-medium  flex items-center  gap-2`}
+                  } px-3 py-2 rounded-md font-medium flex items-center gap-2`}
                 >
                   Technologies
                   <IoIosArrowDown />
                 </Link>
                 {dropdownOpen && (
                   <div
-                    className="absolute -left-[360px]  mt-10 w-max backdrop-blur-3xl bg-[#381c4489] border-[#72006A] border-2 rounded-xl text-white shadow-lg p-6 grid grid-cols-4 gap-4"
-                    style={{ minWidth: "300px" }} // Adjust minWidth as needed
+                    className="absolute -left-[360px] mt-10 w-max backdrop-blur-3xl bg-[#381c4489] border-[#72006A] border-2 rounded-xl text-white shadow-lg p-6 grid grid-cols-4 gap-4"
+                    style={{ minWidth: "300px" }}
                   >
                     {/* MERN-Stack Dropdown Content */}
                     <div>
-                      <h3 className="font-bold ">MERN-Stack</h3>
+                      <h3 className="font-bold">MERN-Stack</h3>
                       <ul>
                         <li>
                           <a
-                            href="https://www.mongodb.com"
+                            href="https://react.dev"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="py-1  flex items-center  gap-2"
+                            className="py-1 flex items-center gap-2"
                           >
-                            <SiMongodb />
-                            MongoDB
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            href="https://expressjs.com"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="py-1  flex items-center  gap-2"
-                          >
-                            <SiExpress />
-                            Express JS
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            href="https://reactjs.org"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="py-1  flex items-center  gap-2"
-                          >
-                            <FaReact />
+                            <Image
+                              src="https://i.ibb.co/JHL2Pd5/react.png"
+                              alt="React JS"
+                              width={16}
+                              height={16}
+                              className="w-4 h-4"
+                            />
                             React JS
                           </a>
                         </li>
@@ -363,10 +345,50 @@ export default function Navbar() {
                             href="https://nodejs.org"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="py-1  flex items-center  gap-2"
+                            className="py-1 flex items-center gap-2"
                           >
-                            <FaNode />
+                            <Image
+                              src="https://i.ibb.co/PWFDZ3b/nodejs.png"
+                              alt="Node JS"
+                              width={16}
+                              height={16}
+                              className="w-4 h-4"
+                            />
                             Node JS
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="https://expressjs.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="py-1 flex items-center gap-2"
+                          >
+                            <Image
+                              src="https://i.ibb.co/frpdrGT/Express.png"
+                              alt="Express JS"
+                              width={16}
+                              height={16}
+                              className="w-4 h-4"
+                            />
+                            Express JS
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="https://www.mongodb.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="py-1 flex items-center gap-2"
+                          >
+                            <Image
+                              src="https://i.ibb.co/X2JL6BY/mongodb.png"
+                              alt="MongoDB"
+                              width={16}
+                              height={16}
+                              className="w-4 h-4"
+                            />
+                            MongoDB
                           </a>
                         </li>
                       </ul>
@@ -374,16 +396,22 @@ export default function Navbar() {
 
                     {/* Front-End Dropdown Content */}
                     <div>
-                      <h3 className="font-bold ">Front-End</h3>
+                      <h3 className="font-bold">Front-End</h3>
                       <ul>
                         <li>
                           <a
-                            href="https://reactjs.org"
+                            href="https://react.dev"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="py-1  flex items-center  gap-2"
+                            className="py-1 flex items-center gap-2"
                           >
-                            <FaReact />
+                            <Image
+                              src="https://i.ibb.co/JHL2Pd5/react.png"
+                              alt="React JS"
+                              width={16}
+                              height={16}
+                              className="w-4 h-4"
+                            />
                             React JS
                           </a>
                         </li>
@@ -392,9 +420,15 @@ export default function Navbar() {
                             href="https://nextjs.org"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="py-1  flex items-center  gap-2"
+                            className="py-1 flex items-center gap-2"
                           >
-                            <SiNextdotjs />
+                            <Image
+                              src="https://i.ibb.co/5W5q0CY/nextjs.png"
+                              alt="Next JS"
+                              width={16}
+                              height={16}
+                              className="w-4 h-4"
+                            />
                             Next JS
                           </a>
                         </li>
@@ -403,9 +437,15 @@ export default function Navbar() {
                             href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="py-1  flex items-center  gap-2"
+                            className="py-1 flex items-center gap-2"
                           >
-                            <IoLogoJavascript />
+                            <Image
+                              src="https://i.ibb.co/BnVxMSs/js.png"
+                              alt="JavaScript"
+                              width={16}
+                              height={16}
+                              className="w-4 h-4"
+                            />
                             JavaScript
                           </a>
                         </li>
@@ -414,9 +454,15 @@ export default function Navbar() {
                             href="https://www.typescriptlang.org"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="py-1  flex items-center  gap-2"
+                            className="py-1 flex items-center gap-2"
                           >
-                            <SiTypescript />
+                            <Image
+                              src="https://i.ibb.co/Jy6bMst/ts.png"
+                              alt="TypeScript"
+                              width={16}
+                              height={16}
+                              className="w-4 h-4"
+                            />
                             TypeScript
                           </a>
                         </li>
@@ -425,9 +471,15 @@ export default function Navbar() {
                             href="https://redux.js.org"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="py-1  flex items-center  gap-2"
+                            className="py-1 flex items-center gap-2"
                           >
-                            <SiRedux />
+                            <Image
+                              src="https://i.ibb.co/pbz2PWm/redux.png"
+                              alt="Redux"
+                              width={16}
+                              height={16}
+                              className="w-4 h-4"
+                            />
                             Redux
                           </a>
                         </li>
@@ -436,32 +488,50 @@ export default function Navbar() {
                             href="https://tailwindcss.com"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="py-1  flex items-center  gap-2"
+                            className="py-1 flex items-center gap-2"
                           >
-                            <SiTailwindcss />
+                            <Image
+                              src="https://i.ibb.co/3hXsTg1/tailwind.png"
+                              alt="Tailwind"
+                              width={16}
+                              height={16}
+                              className="w-4 h-4"
+                            />
                             Tailwind
                           </a>
                         </li>
                         <li>
                           <a
-                            href="https://getbootstrap.com"
+                            href="https://vuejs.org"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="py-1  flex items-center  gap-2"
+                            className="py-1 flex items-center gap-2"
                           >
-                            <FaBootstrap />
-                            Bootstrap
+                            <Image
+                              src="https://w7.pngwing.com/pngs/595/279/png-transparent-vue-js-javascript-library-angularjs-react-vue-js-template-angle-text-thumbnail.png"
+                              alt="Vue.js"
+                              width={16}
+                              height={16}
+                              className="w-4 h-4"
+                            />
+                            Vue.js
                           </a>
                         </li>
                         <li>
                           <a
-                            href="https://mui.com"
+                            href="https://angular.io"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="py-1  flex items-center  gap-2"
+                            className="py-1 flex items-center gap-2"
                           >
-                            <SiMui />
-                            Material UI
+                            <Image
+                              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVUcQofbdW28AoTCjLFzojT7sSZQVsEurWQA&s"
+                              alt="Angular"
+                              width={16}
+                              height={16}
+                              className="w-4 h-4"
+                            />
+                            Angular
                           </a>
                         </li>
                       </ul>
@@ -469,16 +539,22 @@ export default function Navbar() {
 
                     {/* Back-End Dropdown Content */}
                     <div>
-                      <h3 className="font-bold ">Back-End</h3>
+                      <h3 className="font-bold">Back-End</h3>
                       <ul>
                         <li>
                           <a
                             href="https://nodejs.org"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="py-1  flex items-center  gap-2"
+                            className="py-1 flex items-center gap-2"
                           >
-                            <FaNode />
+                            <Image
+                              src="https://i.ibb.co/PWFDZ3b/nodejs.png"
+                              alt="Node JS"
+                              width={16}
+                              height={16}
+                              className="w-4 h-4"
+                            />
                             Node JS
                           </a>
                         </li>
@@ -487,43 +563,118 @@ export default function Navbar() {
                             href="https://expressjs.com"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="py-1  flex items-center  gap-2"
+                            className="py-1 flex items-center gap-2"
                           >
-                            <SiExpress />
+                            <Image
+                              src="https://i.ibb.co/frpdrGT/Express.png"
+                              alt="Express JS"
+                              width={16}
+                              height={16}
+                              className="w-4 h-4"
+                            />
                             Express JS
                           </a>
                         </li>
                         <li>
                           <a
-                            href="https://jwt.io"
+                            href="https://www.python.org"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="py-1  flex items-center  gap-2"
+                            className="py-1 flex items-center gap-2"
                           >
-                            <SiNpm />
-                            JWT
+                            <Image
+                              src="https://banner2.cleanpng.com/20190623/yp/kisspng-python-computer-icons-programming-language-executa-1713885634631.webp"
+                              alt="Python"
+                              width={16}
+                              height={16}
+                              className="w-4 h-4"
+                            />
+                            Python
                           </a>
                         </li>
                         <li>
                           <a
-                            href="https://zod.dev"
+                            href="https://www.djangoproject.com"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="py-1  flex items-center  gap-2"
+                            className="py-1 flex items-center gap-2"
                           >
-                            <SiNpm />
-                            Zod
+                            <Image
+                              src="https://e7.pngegg.com/pngimages/10/113/png-clipart-django-web-development-web-framework-python-software-framework-django-text-trademark-thumbnail.png"
+                              alt="Django"
+                              width={16}
+                              height={16}
+                              className="w-4 h-4"
+                            />
+                            Django
                           </a>
                         </li>
                         <li>
                           <a
-                            href="https://cloudinary.com"
+                            href="https://www.java.com"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="py-1  flex items-center  gap-2"
+                            className="py-1 flex items-center gap-2"
                           >
-                            <SiCloudinary />
-                            Cloudinary
+                            <Image
+                              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnM3JO-10pqUHbWWP5tuOo-9LKUZhogZEEww&s"
+                              alt="Java"
+                              width={16}
+                              height={16}
+                              className="w-4 h-4"
+                            />
+                            Java
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="https://dotnet.microsoft.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="py-1 flex items-center gap-2"
+                          >
+                            <Image
+                              src="https://w7.pngwing.com/pngs/929/60/png-transparent-net-framework-c-net-core-software-framework-mono-studio-purple-studio-violet-thumbnail.png"
+                              alt="C#"
+                              width={16}
+                              height={16}
+                              className="w-4 h-4"
+                            />
+                            C#
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="https://www.php.net"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="py-1 flex items-center gap-2"
+                          >
+                            <Image
+                              src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/2560px-PHP-logo.svg.png"
+                              alt="PHP"
+                              width={16}
+                              height={16}
+                              className="w-4 h-4"
+                            />
+                            PHP
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="https://laravel.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="py-1 flex items-center gap-2"
+                          >
+                            <Image
+                              src="https://static-00.iconduck.com/assets.00/laravel-icon-1990x2048-xawylrh0.png"
+                              alt="Laravel"
+                              width={16}
+                              height={16}
+                              className="w-4 h-4"
+                            />
+                            Laravel
                           </a>
                         </li>
                       </ul>
@@ -531,28 +682,23 @@ export default function Navbar() {
 
                     {/* Database Dropdown Content */}
                     <div>
-                      <h3 className="font-bold ">Database</h3>
+                      <h3 className="font-bold">Database</h3>
                       <ul>
                         <li>
                           <a
                             href="https://www.mongodb.com"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="py-1  flex items-center  gap-2"
+                            className="py-1 flex items-center gap-2"
                           >
-                            <SiMongodb />
+                            <Image
+                              src="https://i.ibb.co/X2JL6BY/mongodb.png"
+                              alt="MongoDB"
+                              width={16}
+                              height={16}
+                              className="w-4 h-4"
+                            />
                             MongoDB
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            href="https://mongoosejs.com"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="py-1  flex items-center  gap-2"
-                          >
-                            <SiNpm />
-                            Mongoose
                           </a>
                         </li>
                         <li>
@@ -560,10 +706,67 @@ export default function Navbar() {
                             href="https://www.postgresql.org"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="py-1  flex items-center  gap-2"
+                            className="py-1 flex items-center gap-2"
                           >
-                            <SiPostgresql />
+                            <Image
+                              src="https://i.ibb.co/SwQHDwN/Postgresql.png"
+                              alt="PostgresQL"
+                              width={16}
+                              height={16}
+                              className="w-4 h-4"
+                            />
                             PostgresQL
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="https://www.mysql.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="py-1 flex items-center gap-2"
+                          >
+                            <Image
+                              src="https://w7.pngwing.com/pngs/717/111/png-transparent-mysql-round-logo-tech-companies-thumbnail.png"
+                              alt="MySQL"
+                              width={16}
+                              height={16}
+                              className="w-4 h-4"
+                            />
+                            MySQL
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="https://firebase.google.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="py-1 flex items-center gap-2"
+                          >
+                            <Image
+                              src="https://i.ibb.co/0qY8Z0X/firebase.png"
+                              alt="Firebase"
+                              width={16}
+                              height={16}
+                              className="w-4 h-4"
+                            />
+                            Firebase
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="https://mongoosejs.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="py-1 flex items-center gap-2"
+                          >
+                            <Image
+                              src="https://i.ibb.co/3SdzPRZ/mongoose.png"
+                              alt="Mongoose"
+                              width={16}
+                              height={16}
+                              className="w-4 h-4"
+                            />
+                            Mongoose
                           </a>
                         </li>
                       </ul>
@@ -571,23 +774,132 @@ export default function Navbar() {
 
                     {/* UI/UX Design Dropdown Content */}
                     <div>
-                      <h3 className="font-bold ">UI/UX Design</h3>
+                      <h3 className="font-bold">UI/UX Design</h3>
                       <ul>
                         <li>
-                          <a href="#" className="block py-1 ">
-                            Tell Us Your Requirements
+                          <a
+                            href="https://www.figma.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="py-1 flex items-center gap-2"
+                          >
+                            <Image
+                              src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Figma-logo.svg/1667px-Figma-logo.svg.png"
+                              alt="Figma"
+                              width={16}
+                              height={16}
+                              className="w-4 h-4"
+                            />
+                            Figma
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="https://www.adobe.com/products/xd.html"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="py-1 flex items-center gap-2"
+                          >
+                            <Image
+                              src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Adobe_XD_CC_icon.svg/2101px-Adobe_XD_CC_icon.svg.png"
+                              alt="Adobe XD"
+                              width={16}
+                              height={16}
+                              className="w-4 h-4"
+                            />
+                            Adobe XD
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="https://www.sketch.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="py-1 flex items-center gap-2"
+                          >
+                            <Image
+                              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3oCenqvw4j6W7oaiG2scIQiHcGC-FpTu63g&s"
+                              alt="Sketch"
+                              width={16}
+                              height={16}
+                              className="w-4 h-4"
+                            />
+                            Sketch
                           </a>
                         </li>
                       </ul>
                     </div>
 
-                    {/* WordPress Dropdown Content */}
+                    {/* CMS & E-commerce Dropdown Content */}
                     <div>
-                      <h3 className="font-bold ">WordPress</h3>
+                      <h3 className="font-bold">CMS & E-commerce</h3>
                       <ul>
                         <li>
-                          <a href="#" className="block py-1 ">
-                            t Tell Us Your Requirements
+                          <a
+                            href="https://wordpress.org"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="py-1 flex items-center gap-2"
+                          >
+                            <Image
+                              src="https://upload.wikimedia.org/wikipedia/commons/9/93/Wordpress_Blue_logo.png"
+                              alt="WordPress"
+                              width={16}
+                              height={16}
+                              className="w-4 h-4"
+                            />
+                            WordPress
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="https://www.shopify.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="py-1 flex items-center gap-2"
+                          >
+                            <Image
+                              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8gV071l8VQBqOvaWyMctGOQ7zD30Z77Swyg&s"
+                              alt="Shopify"
+                              width={16}
+                              height={16}
+                              className="w-4 h-4"
+                            />
+                            Shopify
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="https://business.adobe.com/products/magento/magento-commerce.html"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="py-1 flex items-center gap-2"
+                          >
+                            <Image
+                              src="https://w7.pngwing.com/pngs/1024/250/png-transparent-magento-e-commerce-logo-wordpress-miscellaneous-angle-company-thumbnail.png"
+                              alt="Magento"
+                              width={16}
+                              height={16}
+                              className="w-4 h-4"
+                            />
+                            Magento
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="https://webflow.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="py-1 flex items-center gap-2"
+                          >
+                            <Image
+                              src="https://img.icons8.com/color/512/webflow.png"
+                              alt="Web Flow"
+                              width={16}
+                              height={16}
+                              className="w-4 h-4"
+                            />
+                            Web Flow
                           </a>
                         </li>
                       </ul>
@@ -595,7 +907,6 @@ export default function Navbar() {
                   </div>
                 )}
               </div>
-
               <Link
                 href="/about"
                 onClick={() => setActiveLink("About ")}

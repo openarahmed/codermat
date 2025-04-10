@@ -76,7 +76,7 @@ const Pricing = () => {
   };
 
   return (
-    <div className="py-8 md:py-20 md:mx-auto md:max-w-[1480px] animate-fade-in">
+    <div className="py-8 md:py-20 md:mx-auto md:max-w-[1480px]">
       <h1 className="text-center font-bold md:text-4xl text-2xl md:px-0 px-4">
         Pricing Options for Our Services
       </h1>

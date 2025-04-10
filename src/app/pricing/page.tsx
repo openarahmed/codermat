@@ -6,7 +6,13 @@ import FAQ from "../components/FAQ/faq";
 const PriceDetails = () => {
   return (
     <div className="pt-10 text-white">
-      <Pricing></Pricing> <FAQ></FAQ> <ProjectDiscuss></ProjectDiscuss>
+      <Pricing></Pricing>{" "}
+      <div className="border-t">
+        <FAQ></FAQ>
+      </div>{" "}
+      <div className="border-t">
+        <ProjectDiscuss></ProjectDiscuss>
+      </div>
     </div>
   );
 };
