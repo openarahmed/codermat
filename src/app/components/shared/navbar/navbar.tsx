@@ -743,7 +743,7 @@ export default function Navbar() {
                             className="py-1 flex items-center gap-2"
                           >
                             <Image
-                              src="https://i.ibb.co/0qY8Z0X/firebase.png"
+                              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuawUuQCcq6fD-KpdmL4QixUOyqQqdrVNIDg&s"
                               alt="Firebase"
                               width={16}
                               height={16}
