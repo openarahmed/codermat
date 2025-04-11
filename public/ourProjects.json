@@ -14,6 +14,20 @@
     "serverCode": "https://github.com/shakilcodes/click-website-server"
   },
   {
+    "id": 6,
+    "project_name": "Tuneyo - Music App",
+    "image": "https://i.postimg.cc/Hn980LZV/tune-yo.png",
+    "description": "A music web application that lets users explore, play, and interact with audio tracks.",
+    "technologies": ["React", "Express", "MongoDB", "Firebase"],
+    "requirements": "Create an engaging UI for music lovers with authentication, audio controls, and payment integration.",
+    "approach": "Built with React and backend powered by Express and MongoDB. Firebase handles authentication. Stripe used for payment.",
+    "challenges": "Managing audio performance, user session persistence, and integration of payment gateways.",
+    "completionDate": "April 2025",
+    "liveLink": "https://tuneyo-8be99.web.app/",
+    "clientCode": "https://github.com/shakilcodes/tuneyo-client",
+    "serverCode": "https://github.com/shakilcodes/tuneyo-server"
+  },
+  {
     "id": 2,
     "project_name": "Kicken - Football Academy",
     "image": "https://i.postimg.cc/43mFQL3N/Kicken_website_home_page.png",
