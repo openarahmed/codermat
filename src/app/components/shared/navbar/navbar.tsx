@@ -975,6 +975,17 @@ export default function Navbar() {
                 >
                   About
                 </Link>
+                <Link
+                  href="/pricing"
+                  onClick={() => setActiveLink("pricing")}
+                  className={`block px-3 py-2 rounded-md font-medium ${
+                    activeLink === "pricing"
+                      ? "bg-gray-100 text-black"
+                      : "hover:bg-gray-200"
+                  }`}
+                >
+                  Pricing
+                </Link>
                 <a
                   href="/projects"
                   onClick={() => setActiveLink("projects")}
@@ -1203,6 +1214,18 @@ export default function Navbar() {
           >
             About
           </a>
+          <a
+            href="/pricing"
+            onClick={() => setActiveLink("pricing")}
+            className={`block px-3 py-2 rounded-md text-base font-medium ${
+              activeLink === "pricing"
+                ? "bg-gradient-to-l from-[#49156D] to-[#930087] text-white hover:border-[#c445ff] hover:from-[#6C00A5] hover:to-[#6A0170] duration-150"
+                : "hover:bg-gradient-to-l from-[#49156D] to-[#49165C] text-white hover:border-[#c445ff] hover:from-[#6C00A5] hover:to-[#6A0170] duration-150"
+            }`}
+          >
+            Pricing
+          </a>
+
           <a
             href="/projects"
             onClick={() => setActiveLink("projects")}

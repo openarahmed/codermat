@@ -3,9 +3,9 @@ import React from "react";
 
 const TermsAndConditions = () => {
   return (
-    <section className="py-28 text-white bg-gradient-to-bl from-[#93239d] via-[#190b34] to-[#280d42] ">
+    <section className="py-28 text-white bg-gradient-to-bl from-[#93239d] via-[#190b34] to-[#280d42] px-5 lg:px-0">
       <div className=" max-w-5xl mx-auto">
-        <h1 className="text-4xl font-extrabold text-center  mb-6">
+        <h1 className="text-3xl md:text-4xl font-extrabold text-center  mb-6">
           Terms & Conditions
         </h1>
         <p className="text-center text-sm text-gray-600 mb-8">

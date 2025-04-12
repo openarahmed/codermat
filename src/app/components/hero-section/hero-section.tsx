@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Bounce, toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Image from "next/image";
+import ScrollDownArrow from "../ScrollingDown/ScrollDownArrow";
 
 export default function HeroSection() {
   const form = useRef<HTMLFormElement | null>(null);
@@ -168,6 +169,7 @@ export default function HeroSection() {
           </div>
         </div>
       </section>
+      <ScrollDownArrow></ScrollDownArrow>
 
       <Image
         className="w-full"

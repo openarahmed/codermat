@@ -189,7 +189,7 @@ const AboutUs = () => {
               />
             </div>
             <p className="font-bold text-xl">
-              <span className="font-bold text-xl">Nayem</span> / CEO,{" "}
+              <span className="font-bold text-xl">Team</span>{" "}
               <span className="font-bold text-xl">CoderMat</span>
             </p>
           </div>

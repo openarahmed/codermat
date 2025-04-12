@@ -5,7 +5,7 @@ import React from "react";
 
 const JoinOurCreativeTeam = () => {
   return (
-    <section className="py-28 text-white bg-gradient-to-bl from-[#93239d] via-[#190b34] to-[#280d42]">
+    <section className="py-28 text-white bg-gradient-to-bl from-[#93239d] via-[#190b34] to-[#280d42] px-5 md:px-0">
       <div className="max-w-6xl mx-auto">
         <div className="mb-8 text-center">
           <h1 className="text-3xl font-bold mb-4">Join Our Creative Team</h1>
