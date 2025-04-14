@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="bg-[#22102F] text-white">
       <div className="bg-[#6461616d] p-[1px] md:mb-12 mb-8" />
 
-      <div className="max-w-7xl mx-auto px-5 md:px-10">
+      <div className="max-w-7xl 2xl:max-w-[105rem] mx-auto px-5 md:px-10">
         <div className="md:flex justify-between">
           <div className="mb-6 md:mb-0">
             <h3 className="text-2xl font-semibold">

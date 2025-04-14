@@ -41,17 +41,17 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`roboto-regular py-3 fixed top-0 left-0 w-full transition-colors duration-300 z-30  ${
+      className={`roboto-regular tracking-wide py-3 fixed top-0 left-0 w-full transition-colors duration-300 z-30  ${
         scrolled ? "bg-[#21112e] bg-opacity-85 shadow-2xl " : "bg-transparent "
       }`}
     >
-      <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 ">
+      <div className="max-w-7xl 2xl:max-w-[105rem] mx-auto px-2 sm:px-6 lg:px-8 ">
         <div className="relative flex items-center  justify-between md:h-16">
           <div className="flex items-center ">
             <div className="flex-shrink-0">
               <Link href="/">
                 <Image
-                  className="w-28 md:w-full"
+                  className="w-28 lg:w-[150px]"
                   src="https://i.postimg.cc/pXrT6fkh/Rectangle-4.png"
                   alt="CoderMat"
                   width={112}

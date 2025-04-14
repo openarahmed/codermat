@@ -31,8 +31,20 @@ export default function Home() {
 
   return (
     <>
-      <section className="bg-gradient-to-bl md:pt-24 from-[#93239d] via-[#190b34] to-[#280d42] border-b">
-        <HeroSection />
+      <section
+        className="relative min-h-screen md:pt-24 border-b bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage:
+            "url('https://i.postimg.cc/hPDQGNGn/banner-final.jpg')",
+        }}
+      >
+        {/* Black overlay */}
+        <div className="absolute inset-0 bg-black opacity-60 z-0"></div>
+
+        {/* Content on top of the overlay */}
+        <div className="relative z-10">
+          <HeroSection />
+        </div>
       </section>
 
       <section className="bg-gradient-to-b from-[#21112E] via-[#280d42] to-[#280d42]">

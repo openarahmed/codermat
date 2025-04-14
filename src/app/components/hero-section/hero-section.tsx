@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import emailjs from "emailjs-com";
 import Link from "next/link";
 import { Bounce, toast, ToastContainer } from "react-toastify";
@@ -14,14 +14,13 @@ export default function HeroSection() {
 
     if (form.current) {
       try {
-        const result = await emailjs.sendForm(
-          "service_u0e6rrn", // Service ID
-          "template_ctk2p65", // Template ID
-          form.current, // Form Reference
-          "UANiDaV9CE5zcmzkX" // Public Key
+        await emailjs.sendForm(
+          "service_u0e6rrn",
+          "template_ctk2p65",
+          form.current,
+          "UANiDaV9CE5zcmzkX"
         );
 
-        // Display toast notification
         toast.success("Message sent successfully!", {
           position: "top-right",
           autoClose: 5000,
@@ -34,10 +33,7 @@ export default function HeroSection() {
           transition: Bounce,
         });
 
-        // Clear form inputs
         form.current.reset();
-
-        // Hide the success message after 5 seconds
       } catch (error) {
         toast.error("❌ Failed to send the message. Please try again.", {
           position: "top-right",
@@ -51,13 +47,11 @@ export default function HeroSection() {
           transition: Bounce,
         });
       }
-    } else {
     }
   };
 
   return (
     <div>
-      {/* Toast Container */}
       <ToastContainer />
 
       <style jsx>{`
@@ -81,21 +75,55 @@ export default function HeroSection() {
             opacity: 1;
           }
         }
+        @keyframes spinSlow {
+          0% {
+            transform: rotate(0deg);
+          }
+          100% {
+            transform: rotate(360deg);
+          }
+        }
+        @keyframes zoom-in-out {
+          0% {
+            transform: scale(1);
+          }
+          50% {
+            transform: scale(1.2);
+          }
+          100% {
+            transform: scale(1);
+          }
+        }
         .animate-top {
           animation: slideLeft 1.5s ease-out;
         }
         .animate-bottom {
           animation: slideRight 1.5s ease-out;
         }
+        .animate-spin-slow {
+          animation: spinSlow 10s linear infinite;
+        }
+        .animate-zoom-in-out {
+          animation: zoom-in-out 3s ease-in-out infinite;
+        }
       `}</style>
 
       <section className="pt-20 pb-10 md:pb-0 md:pt-0 flex items-center justify-center md:p-3 lg:p-8">
-        <div className="flex flex-col gap-2 lg:gap-0 items-center justify-center md:flex-row max-w-5xl mx-auto w-full text-white md:pt-20 lg:pt-0 md:px-10 lg:px-0">
+        <div className="flex flex-col gap-2 lg:gap-0 items-center justify-center md:flex-row max-w-5xl mx-auto w-full text-white md:pt-20 lg:pt-0 2xl:pt-[250px] md:px-10 lg:px-0">
           {/* Left Section */}
           <div className="flex-1 mb-8 md:mb-0 animate-bottom">
-            <h1 className="text-3xl mx-5 md:mx-0 md:text-4xl lg:text-5xl text-center md:text-start font-bold">
-              Bring Your Tech Ideas into Reality.
-            </h1>
+            <div>
+              <h1 className="text-3xl mx-5 md:mx-0 md:text-4xl lg:text-5xl text-center md:text-start font-bold">
+                Bring Your Tech Ideas into Reality.
+              </h1>
+              <Image
+                src="https://i.postimg.cc/MpM9s9jC/js.png"
+                alt="JavaScript Icon"
+                width={540}
+                height={540}
+                className="animate-zoom-in-out  w-[120px] absolute -top-5 2xl:top-[50px] left-8 2xl:left-[300px] hidden md:block"
+              />
+            </div>
             <p className="mt-2 md:mt-4 text-sm md:text-xl text-center md:text-start md:max-w-md md:px-0 px-7 py-2">
               <span className="font-semibold text-xl">
                 Your Vision, Our Expertise
@@ -110,7 +138,26 @@ export default function HeroSection() {
                   Our Services
                 </button>
               </Link>
+              <div className="w-full flex flex-col items-center left-[120px]  md:hidden absolute">
+                {/* Arrow with bounce animation */}
+                <div className="flex flex-col items-center animate-bounce">
+                  <div className="w-px h-8 bg-white"></div>
+                  <div className="w-2.5 h-2.5 border-b-2 border-r-2 border-white rotate-45 -mt-1"></div>
+                </div>
+
+                {/* SCROLL text below the arrow */}
+                <p className="text-[10px] tracking-[0.3em] font-light mt-2 text-white md:hidden">
+                  SCROLL
+                </p>
+              </div>
             </div>
+            <Image
+              src="https://i.postimg.cc/vHdHhZSM/tailwind.png"
+              alt="Tailwind CSS Icon"
+              width={540}
+              height={540}
+              className="animate-spin-then-straight w-[150px] absolute lg:-bottom-10 left-1 2xl:left-[300px] hidden md:block"
+            />
           </div>
 
           {/* Right Section */}
@@ -119,9 +166,18 @@ export default function HeroSection() {
             <div className="md:h-[450px] lg:h-[530px] md:w-[320px] lg:w-[390px] absolute bg-gradient-to-br from-[#350da5] via-[#7b0ea0] to-[#99058d] rounded-3xl transform -rotate-12 opacity-75 hidden lg:block"></div>
 
             {/* Front Static Card */}
-            <div className=" relative bg-gradient-to-br from-[#350da5] via-[#7b0ea0] to-[#99058d] opacity-80 p-8 rounded-3xl shadow-lg w-[330px] md:h-[500px] lg:h-[530px] md:w-[340px] lg:w-[390px] max-w-md">
+            <div className="relative bg-gradient-to-br from-[#350da5] via-[#7b0ea0] to-[#99058d] opacity-80 p-8 rounded-3xl shadow-lg w-[330px] md:h-[500px] lg:h-[530px] md:w-[340px] lg:w-[390px] max-w-md">
+              {/* Spinning React Icon */}
+              <Image
+                src="https://i.postimg.cc/pX2N6M2g/react.png"
+                alt="React Icon"
+                width={660}
+                height={660}
+                className="absolute w-[120px] top-3 2xl:-top-[100px] -right-[195px] 2xl:-right-[350px] animate-spin-slow z-10"
+              />
+
               <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center">
-                Let’s start a <br /> Project Together
+                Let's start a <br /> Project Together
               </h2>
               <form ref={form} onSubmit={sendEmail}>
                 <div className="mb-4">
@@ -162,23 +218,24 @@ export default function HeroSection() {
                   type="submit"
                   className="mt-6 border-2 gap-2 border-[#ffffff] hover:bg-gradient-to-l from-[#49156D] to-[#49165C] text-white hover:border-[#c445ff] hover:from-[#6C00A5] hover:to-[#6A0170] duration-150 px-5 py-2 rounded-md bottom-[13px] md:absolute lg:static"
                 >
-                  Let’s Talk
+                  Let's Talk
                 </button>
               </form>
             </div>
+            <Image
+              src="https://i.postimg.cc/7hxNVFgr/html.png"
+              alt="Tailwind CSS Icon"
+              width={540}
+              height={540}
+              className="animate-spin-then-straight w-[80px] absolute bottom-10 2xl:-bottom-[50px] left-[540px] 2xl:left-[600px]"
+            />
           </div>
         </div>
       </section>
-      <ScrollDownArrow></ScrollDownArrow>
 
-      <Image
-        className="w-full"
-        src="https://i.postimg.cc/kgGNMLQ8/home14-bg4.png"
-        alt=""
-        layout="responsive"
-        width={1200}
-        height={800}
-      />
+      <div className="hidden md:block">
+        <ScrollDownArrow />
+      </div>
     </div>
   );
 }
