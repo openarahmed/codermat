@@ -240,55 +240,6 @@
     ]
   },
   {
-    "id": 6,
-    "image_url": "https://i.ibb.co.com/vZ1ggTS/Group-1000001638.png",
-    "title": "WordPress Development",
-    "short_description": "Create dynamic, scalable, and user-friendly WordPress websites with customized themes, powerful plugins, and seamless integrations that drive business success.",
-    "service_details_description": "At CoderMat, we specialize in building robust WordPress solutions tailored to your specific needs. From custom themes to seamless e-commerce integrations, we craft websites that are not only visually appealing but also highly functional. Whether you're starting from scratch or enhancing an existing site, we help you create a platform that scales with your business. Let’s work together to build a WordPress website that meets your goals and exceeds your expectations! At CoderMat, we’re more than just developers—we’re your partners in building a powerful online presence that leaves a lasting impact. Whether you’re a passionate startup eager to disrupt the market or an established brand ready for a digital makeover, our team blends innovation, strategy, and technical know-how to bring your ideas to life. We don’t just create websites; we craft immersive digital experiences that captivate your audience and drive your business forward. Together, we’ll turn your vision into something extraordinary. Reach out today, and let’s create a future where your brand leads the way!",
-    "service_features": [
-      {
-        "id": 1,
-        "title": "Custom Themes",
-        "description": "We design and develop unique WordPress themes that reflect your brand’s identity and enhance the user experience. Our custom themes are fully tailored to suit your business, ensuring your website stands out and provides a memorable browsing experience."
-      },
-      {
-        "id": 2,
-        "title": "Plugin Integration",
-        "description": "We seamlessly integrate essential plugins to extend the functionality of your WordPress site. From SEO tools to social media integration and advanced security features, we ensure your website has all the tools it needs to perform at its best."
-      },
-      {
-        "id": 3,
-        "title": "Responsive Design",
-        "description": "Our WordPress websites are designed to look great on any device. With responsive design, your site will automatically adjust to any screen size, providing a seamless experience for users whether they’re browsing on a desktop, tablet, or smartphone."
-      },
-      {
-        "id": 4,
-        "title": "SEO Optimization",
-        "description": "We implement SEO best practices from the ground up to ensure your WordPress website ranks higher on search engines. From optimizing images to writing effective meta descriptions, we focus on every detail to increase your visibility and drive organic traffic to your site."
-      },
-      {
-        "id": 5,
-        "title": "Content Management",
-        "description": "WordPress makes content management easy, and we help you leverage its full potential. We create intuitive, user-friendly systems that allow you to manage your content with ease, from blog posts to pages and multimedia."
-      },
-      {
-        "id": 6,
-        "title": "E-Commerce Solutions",
-        "description": "We integrate powerful e-commerce features using platforms like WooCommerce to create secure, user-friendly online stores. Whether you’re selling physical or digital products, our WordPress solutions are tailored to help you grow your online business."
-      },
-      {
-        "id": 7,
-        "title": "Speed Optimization",
-        "description": "We ensure your WordPress site runs fast and smooth by optimizing performance through techniques like caching, image compression, and code optimization. A faster site means better user experiences, improved search rankings, and higher conversion rates."
-      },
-      {
-        "id": 8,
-        "title": "Ongoing Support",
-        "description": "WordPress websites require regular updates and maintenance. We offer ongoing support to ensure your site stays up-to-date, secure, and performing at its best. Whether it's content updates, plugin management, or troubleshooting, our team is here to help you maintain a top-tier website."
-      }
-    ]
-  },
-  {
     "id": 7,
     "image_url": "https://i.ibb.co.com/KG8MBBj/Group-1000001638.png",
     "title": "UI & UX Design",

@@ -41,16 +41,17 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`roboto-regular  md:py-3 fixed top-0 left-0 w-full transition-colors duration-300 z-30  ${scrolled ? "bg-[#21112e] bg-opacity-85 shadow-2xl " : "bg-transparent "
-        }`}
+      className={`roboto-regular tracking-wide py-3 fixed top-0 left-0 w-full transition-colors duration-300 z-30  ${
+        scrolled ? "bg-[#21112e] bg-opacity-85 shadow-2xl " : "bg-transparent "
+      }`}
     >
-      <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 ">
-        <div className="relative flex items-center justify-between md:h-16">
-          <div className="flex items-center">
+      <div className="max-w-7xl 2xl:max-w-[105rem] mx-auto px-2 sm:px-6 lg:px-8 ">
+        <div className="relative flex items-center  justify-between md:h-16">
+          <div className="flex items-center ">
             <div className="flex-shrink-0">
               <Link href="/">
                 <Image
-                  className="w-28 md:w-full"
+                  className="w-28 lg:w-[150px]"
                   src="https://i.postimg.cc/pXrT6fkh/Rectangle-4.png"
                   alt="CoderMat"
                   width={112}
@@ -61,18 +62,18 @@ export default function Navbar() {
           </div>
 
           <div className="hidden sm:flex flex-1 justify-center sm:ml-6">
-            <div className="relative flex items-center space-x-4 z-40">
+            <div className="relative flex items-center  space-x-4 z-40">
               <Link
                 href="/"
                 onClick={() => setActiveLink("home")}
-                className={`${activeLink === "home"
-                  ? "bg-white/20 text-white"
-                  : "text-white hover:bg-white/20 hover:text-white"
-                  } px-3 py-2 rounded-md  font-medium`}
+                className={`${
+                  activeLink === "home"
+                    ? "bg-white/20 text-white"
+                    : "text-white hover:bg-white/20 hover:text-white"
+                } px-3 py-2 rounded-md  font-medium`}
               >
                 Home
               </Link>
-
               <div
                 className="relative flex justify-center"
                 onMouseEnter={() => setDropdownOpenTech(true)}
@@ -84,23 +85,24 @@ export default function Navbar() {
                     setActiveLink("services");
                     setDropdownOpenTech(!dropdownOpenTech);
                   }}
-                  className={`${activeLink === "services"
-                    ? "bg-white/20 text-white"
-                    : "text-white hover:bg-white/20 hover:text-white"
-                    } px-3 py-2 rounded-md  font-medium  flex items-center gap-2`}
+                  className={`${
+                    activeLink === "services"
+                      ? "bg-white/20 text-white"
+                      : "text-white hover:bg-white/20 hover:text-white"
+                  } px-3 py-2 rounded-md  font-medium  flex items-center  gap-2`}
                 >
                   Services
                   <IoIosArrowDown></IoIosArrowDown>
                 </Link>
                 {dropdownOpenTech && (
                   <div
-                    className="absolute -left-[260px]  mt-12 w-max backdrop-blur-3xl bg-[#381c4489] border-[#72006A] border-2 rounded-xl text-white shadow-lg p-6 grid grid-cols-4 gap-4"
+                    className="absolute -left-[290px]  mt-10 w-max  backdrop-blur-3xl bg-[#381c4489] border-[#72006A] border-2 rounded-xl text-white shadow-lg p-6 grid grid-cols-4 gap-4"
                     style={{ minWidth: "300px" }} // Adjust minWidth as needed
                   >
                     {/* Services Dropdown Content */}
                     <div>
-                      <h3 className="font-bold text-xl mb-4">
-                        Custom Web Application <br /> Development
+                      <h3 className="font-bold  mb-4">
+                        Custom Web Development
                       </h3>
                       <ul className="space-y-2">
                         {[
@@ -113,8 +115,11 @@ export default function Navbar() {
                           "Advanced Security",
                           "Ongoing Support",
                         ].map((item, index) => (
-                          <li key={index} className="flex items-center">
-                            <span className="flex-shrink-0 w-3 h-3 bg-white rounded-full mr-3"></span>
+                          <li
+                            key={index}
+                            className="flex items-center  text-[12px]"
+                          >
+                            <span className="flex-shrink-0 w-1 h-1 bg-white rounded-full mr-2"></span>
                             <a href="#" className=" font-semibold">
                               {item}
                             </a>
@@ -124,7 +129,7 @@ export default function Navbar() {
                     </div>
 
                     <div>
-                      <h3 className="font-bold text-xl mb-4">
+                      <h3 className="font-bold  mb-4">
                         Web Portal Development
                       </h3>
                       <ul className="space-y-2">
@@ -138,8 +143,11 @@ export default function Navbar() {
                           "Advanced Search Features",
                           "Ongoing Maintenance",
                         ].map((item, index) => (
-                          <li key={index} className="flex items-center">
-                            <span className="flex-shrink-0 w-3 h-3 bg-white rounded-full mr-3"></span>
+                          <li
+                            key={index}
+                            className="flex items-center text-[12px]"
+                          >
+                            <span className="flex-shrink-0 w-1 h-1 bg-white rounded-full mr-2"></span>
                             <a href="#" className="font-semibold">
                               {item}
                             </a>
@@ -149,7 +157,7 @@ export default function Navbar() {
                     </div>
 
                     <div>
-                      <h3 className="font-bold text-xl mb-4">
+                      <h3 className="font-bold  mb-4">
                         E-commerce Development
                       </h3>
                       <ul className="space-y-2">
@@ -163,8 +171,11 @@ export default function Navbar() {
                           "SEO-Friendly Features",
                           "Order Tracking Systems",
                         ].map((item, index) => (
-                          <li key={index} className="flex items-center">
-                            <span className="flex-shrink-0 w-3 h-3 bg-white rounded-full mr-3"></span>
+                          <li
+                            key={index}
+                            className="flex items-center text-[12px]"
+                          >
+                            <span className="flex-shrink-0 w-1 h-1 bg-white rounded-full mr-2"></span>
                             <a href="#" className="font-semibold">
                               {item}
                             </a>
@@ -174,9 +185,7 @@ export default function Navbar() {
                     </div>
 
                     <div>
-                      <h3 className="font-bold text-xl mb-4">
-                        WordPress Development
-                      </h3>
+                      <h3 className="font-bold  mb-4">WordPress Development</h3>
                       <ul className="space-y-2">
                         {[
                           "Custom Themes",
@@ -188,10 +197,13 @@ export default function Navbar() {
                           "Speed Optimization",
                           "Ongoing Support",
                         ].map((item, index) => (
-                          <li key={index} className="flex items-center">
-                            <span className="flex-shrink-0 w-3 h-3 bg-white rounded-full mr-3"></span>
+                          <li
+                            key={index}
+                            className="flex items-center text-[12px]"
+                          >
+                            <span className="flex-shrink-0 w-1 h-1 bg-white rounded-full mr-2"></span>
                             <a href="#" className="font-semibold">
-                              {item}
+                              {item}t{" "}
                             </a>
                           </li>
                         ))}
@@ -199,7 +211,7 @@ export default function Navbar() {
                     </div>
 
                     <div>
-                      <h3 className="font-bold text-xl mb-4">UI & UX Design</h3>
+                      <h3 className="font-bold  mb-4">UI & UX Design</h3>
                       <ul className="space-y-2">
                         {[
                           "User-Centered Design",
@@ -211,10 +223,13 @@ export default function Navbar() {
                           "Cross-Platform Compatibility",
                           "Usability Testing",
                         ].map((item, index) => (
-                          <li key={index} className="flex items-center">
-                            <span className="flex-shrink-0 w-3 h-3 bg-white rounded-full mr-3"></span>
+                          <li
+                            key={index}
+                            className="flex items-center text-[12px]"
+                          >
+                            <span className="flex-shrink-0 w-1 h-1 bg-white rounded-full mr-2"></span>
                             <a href="#" className=" font-semibold">
-                              {item}
+                              {item}t{" "}
                             </a>
                           </li>
                         ))}
@@ -222,7 +237,7 @@ export default function Navbar() {
                     </div>
 
                     <div>
-                      <h3 className="font-bold text-xl mb-4">
+                      <h3 className="font-bold  mb-4">
                         Front-end Web Development
                       </h3>
                       <ul className="space-y-2">
@@ -236,8 +251,11 @@ export default function Navbar() {
                           "SEO-Friendly Code",
                           "User-Focused Layouts",
                         ].map((item, index) => (
-                          <li key={index} className="flex items-center">
-                            <span className="flex-shrink-0 w-3 h-3 bg-white rounded-full mr-3"></span>
+                          <li
+                            key={index}
+                            className="flex items-center text-[12px]"
+                          >
+                            <span className="flex-shrink-0 w-1 h-1 bg-white rounded-full mr-2"></span>
                             <a href="#" className="font-semibold">
                               {item}
                             </a>
@@ -247,7 +265,7 @@ export default function Navbar() {
                     </div>
 
                     <div>
-                      <h3 className="font-bold text-xl mb-4">
+                      <h3 className="font-bold  mb-4">
                         Back-end Web Development
                       </h3>
                       <ul className="space-y-2">
@@ -261,8 +279,11 @@ export default function Navbar() {
                           "Content Management Systems",
                           "Third-Party Integrations",
                         ].map((item, index) => (
-                          <li key={index} className="flex items-center">
-                            <span className="flex-shrink-0 w-3 h-3 bg-white rounded-full mr-3"></span>
+                          <li
+                            key={index}
+                            className="flex items-center text-[12px]"
+                          >
+                            <span className="flex-shrink-0 w-1 h-1 bg-white rounded-full mr-2"></span>
                             <a href="#" className="font-semibold">
                               {item}
                             </a>
@@ -273,7 +294,6 @@ export default function Navbar() {
                   </div>
                 )}
               </div>
-
               <div
                 className="relative flex justify-center"
                 onMouseEnter={() => setDropdownOpen(true)}
@@ -285,53 +305,38 @@ export default function Navbar() {
                     setActiveLink("technologies");
                     setDropdownOpen(!dropdownOpen);
                   }}
-                  className={`${activeLink === "technologies"
-                    ? "bg-white/20 text-white"
-                    : "text-white hover:bg-white/20 hover:text-white"
-                    } px-3 py-2 rounded-md  font-medium  flex items-center gap-2`}
+                  className={`${
+                    activeLink === "technologies"
+                      ? "bg-white/20 text-white"
+                      : "text-white hover:bg-white/20 hover:text-white"
+                  } px-3 py-2 rounded-md font-medium flex items-center gap-2`}
                 >
                   Technologies
                   <IoIosArrowDown />
                 </Link>
                 {dropdownOpen && (
                   <div
-                    className="absolute -left-[360px]  mt-12 w-max backdrop-blur-3xl bg-[#381c4489] border-[#72006A] border-2 rounded-xl text-white shadow-lg p-6 grid grid-cols-4 gap-4"
-                    style={{ minWidth: "300px" }} // Adjust minWidth as needed
+                    className="absolute -left-[360px] mt-10 w-max backdrop-blur-3xl bg-[#381c4489] border-[#72006A] border-2 rounded-xl text-white shadow-lg p-6 grid grid-cols-4 gap-4"
+                    style={{ minWidth: "300px" }}
                   >
                     {/* MERN-Stack Dropdown Content */}
                     <div>
-                      <h3 className="font-bold text-xl">MERN-Stack</h3>
+                      <h3 className="font-bold">MERN-Stack</h3>
                       <ul>
                         <li>
                           <a
-                            href="https://www.mongodb.com"
+                            href="https://react.dev"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="py-1  flex items-center gap-2"
+                            className="py-1 flex items-center gap-2"
                           >
-                            <SiMongodb />
-                            MongoDB
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            href="https://expressjs.com"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="py-1  flex items-center gap-2"
-                          >
-                            <SiExpress />
-                            Express JS
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            href="https://reactjs.org"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="py-1  flex items-center gap-2"
-                          >
-                            <FaReact />
+                            <Image
+                              src="https://i.ibb.co/JHL2Pd5/react.png"
+                              alt="React JS"
+                              width={16}
+                              height={16}
+                              className="w-4 h-4"
+                            />
                             React JS
                           </a>
                         </li>
@@ -340,10 +345,50 @@ export default function Navbar() {
                             href="https://nodejs.org"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="py-1  flex items-center gap-2"
+                            className="py-1 flex items-center gap-2"
                           >
-                            <FaNode />
+                            <Image
+                              src="https://i.ibb.co/PWFDZ3b/nodejs.png"
+                              alt="Node JS"
+                              width={16}
+                              height={16}
+                              className="w-4 h-4"
+                            />
                             Node JS
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="https://expressjs.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="py-1 flex items-center gap-2"
+                          >
+                            <Image
+                              src="https://i.ibb.co/frpdrGT/Express.png"
+                              alt="Express JS"
+                              width={16}
+                              height={16}
+                              className="w-4 h-4"
+                            />
+                            Express JS
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="https://www.mongodb.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="py-1 flex items-center gap-2"
+                          >
+                            <Image
+                              src="https://i.ibb.co/X2JL6BY/mongodb.png"
+                              alt="MongoDB"
+                              width={16}
+                              height={16}
+                              className="w-4 h-4"
+                            />
+                            MongoDB
                           </a>
                         </li>
                       </ul>
@@ -351,16 +396,22 @@ export default function Navbar() {
 
                     {/* Front-End Dropdown Content */}
                     <div>
-                      <h3 className="font-bold text-xl">Front-End</h3>
+                      <h3 className="font-bold">Front-End</h3>
                       <ul>
                         <li>
                           <a
-                            href="https://reactjs.org"
+                            href="https://react.dev"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="py-1  flex items-center gap-2"
+                            className="py-1 flex items-center gap-2"
                           >
-                            <FaReact />
+                            <Image
+                              src="https://i.ibb.co/JHL2Pd5/react.png"
+                              alt="React JS"
+                              width={16}
+                              height={16}
+                              className="w-4 h-4"
+                            />
                             React JS
                           </a>
                         </li>
@@ -369,9 +420,15 @@ export default function Navbar() {
                             href="https://nextjs.org"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="py-1  flex items-center gap-2"
+                            className="py-1 flex items-center gap-2"
                           >
-                            <SiNextdotjs />
+                            <Image
+                              src="https://i.ibb.co/5W5q0CY/nextjs.png"
+                              alt="Next JS"
+                              width={16}
+                              height={16}
+                              className="w-4 h-4"
+                            />
                             Next JS
                           </a>
                         </li>
@@ -380,9 +437,15 @@ export default function Navbar() {
                             href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="py-1  flex items-center gap-2"
+                            className="py-1 flex items-center gap-2"
                           >
-                            <IoLogoJavascript />
+                            <Image
+                              src="https://i.ibb.co/BnVxMSs/js.png"
+                              alt="JavaScript"
+                              width={16}
+                              height={16}
+                              className="w-4 h-4"
+                            />
                             JavaScript
                           </a>
                         </li>
@@ -391,9 +454,15 @@ export default function Navbar() {
                             href="https://www.typescriptlang.org"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="py-1  flex items-center gap-2"
+                            className="py-1 flex items-center gap-2"
                           >
-                            <SiTypescript />
+                            <Image
+                              src="https://i.ibb.co/Jy6bMst/ts.png"
+                              alt="TypeScript"
+                              width={16}
+                              height={16}
+                              className="w-4 h-4"
+                            />
                             TypeScript
                           </a>
                         </li>
@@ -402,9 +471,15 @@ export default function Navbar() {
                             href="https://redux.js.org"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="py-1  flex items-center gap-2"
+                            className="py-1 flex items-center gap-2"
                           >
-                            <SiRedux />
+                            <Image
+                              src="https://i.ibb.co/pbz2PWm/redux.png"
+                              alt="Redux"
+                              width={16}
+                              height={16}
+                              className="w-4 h-4"
+                            />
                             Redux
                           </a>
                         </li>
@@ -413,32 +488,50 @@ export default function Navbar() {
                             href="https://tailwindcss.com"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="py-1  flex items-center gap-2"
+                            className="py-1 flex items-center gap-2"
                           >
-                            <SiTailwindcss />
+                            <Image
+                              src="https://i.ibb.co/3hXsTg1/tailwind.png"
+                              alt="Tailwind"
+                              width={16}
+                              height={16}
+                              className="w-4 h-4"
+                            />
                             Tailwind
                           </a>
                         </li>
                         <li>
                           <a
-                            href="https://getbootstrap.com"
+                            href="https://vuejs.org"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="py-1  flex items-center gap-2"
+                            className="py-1 flex items-center gap-2"
                           >
-                            <FaBootstrap />
-                            Bootstrap
+                            <Image
+                              src="https://w7.pngwing.com/pngs/595/279/png-transparent-vue-js-javascript-library-angularjs-react-vue-js-template-angle-text-thumbnail.png"
+                              alt="Vue.js"
+                              width={16}
+                              height={16}
+                              className="w-4 h-4"
+                            />
+                            Vue.js
                           </a>
                         </li>
                         <li>
                           <a
-                            href="https://mui.com"
+                            href="https://angular.io"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="py-1  flex items-center gap-2"
+                            className="py-1 flex items-center gap-2"
                           >
-                            <SiMui />
-                            Material UI
+                            <Image
+                              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVUcQofbdW28AoTCjLFzojT7sSZQVsEurWQA&s"
+                              alt="Angular"
+                              width={16}
+                              height={16}
+                              className="w-4 h-4"
+                            />
+                            Angular
                           </a>
                         </li>
                       </ul>
@@ -446,16 +539,22 @@ export default function Navbar() {
 
                     {/* Back-End Dropdown Content */}
                     <div>
-                      <h3 className="font-bold text-xl">Back-End</h3>
+                      <h3 className="font-bold">Back-End</h3>
                       <ul>
                         <li>
                           <a
                             href="https://nodejs.org"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="py-1  flex items-center gap-2"
+                            className="py-1 flex items-center gap-2"
                           >
-                            <FaNode />
+                            <Image
+                              src="https://i.ibb.co/PWFDZ3b/nodejs.png"
+                              alt="Node JS"
+                              width={16}
+                              height={16}
+                              className="w-4 h-4"
+                            />
                             Node JS
                           </a>
                         </li>
@@ -464,43 +563,118 @@ export default function Navbar() {
                             href="https://expressjs.com"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="py-1  flex items-center gap-2"
+                            className="py-1 flex items-center gap-2"
                           >
-                            <SiExpress />
+                            <Image
+                              src="https://i.ibb.co/frpdrGT/Express.png"
+                              alt="Express JS"
+                              width={16}
+                              height={16}
+                              className="w-4 h-4"
+                            />
                             Express JS
                           </a>
                         </li>
                         <li>
                           <a
-                            href="https://jwt.io"
+                            href="https://www.python.org"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="py-1  flex items-center gap-2"
+                            className="py-1 flex items-center gap-2"
                           >
-                            <SiNpm />
-                            JWT
+                            <Image
+                              src="https://banner2.cleanpng.com/20190623/yp/kisspng-python-computer-icons-programming-language-executa-1713885634631.webp"
+                              alt="Python"
+                              width={16}
+                              height={16}
+                              className="w-4 h-4"
+                            />
+                            Python
                           </a>
                         </li>
                         <li>
                           <a
-                            href="https://zod.dev"
+                            href="https://www.djangoproject.com"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="py-1  flex items-center gap-2"
+                            className="py-1 flex items-center gap-2"
                           >
-                            <SiNpm />
-                            Zod
+                            <Image
+                              src="https://e7.pngegg.com/pngimages/10/113/png-clipart-django-web-development-web-framework-python-software-framework-django-text-trademark-thumbnail.png"
+                              alt="Django"
+                              width={16}
+                              height={16}
+                              className="w-4 h-4"
+                            />
+                            Django
                           </a>
                         </li>
                         <li>
                           <a
-                            href="https://cloudinary.com"
+                            href="https://www.java.com"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="py-1  flex items-center gap-2"
+                            className="py-1 flex items-center gap-2"
                           >
-                            <SiCloudinary />
-                            Cloudinary
+                            <Image
+                              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnM3JO-10pqUHbWWP5tuOo-9LKUZhogZEEww&s"
+                              alt="Java"
+                              width={16}
+                              height={16}
+                              className="w-4 h-4"
+                            />
+                            Java
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="https://dotnet.microsoft.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="py-1 flex items-center gap-2"
+                          >
+                            <Image
+                              src="https://w7.pngwing.com/pngs/929/60/png-transparent-net-framework-c-net-core-software-framework-mono-studio-purple-studio-violet-thumbnail.png"
+                              alt="C#"
+                              width={16}
+                              height={16}
+                              className="w-4 h-4"
+                            />
+                            C#
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="https://www.php.net"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="py-1 flex items-center gap-2"
+                          >
+                            <Image
+                              src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/2560px-PHP-logo.svg.png"
+                              alt="PHP"
+                              width={16}
+                              height={16}
+                              className="w-4 h-4"
+                            />
+                            PHP
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="https://laravel.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="py-1 flex items-center gap-2"
+                          >
+                            <Image
+                              src="https://static-00.iconduck.com/assets.00/laravel-icon-1990x2048-xawylrh0.png"
+                              alt="Laravel"
+                              width={16}
+                              height={16}
+                              className="w-4 h-4"
+                            />
+                            Laravel
                           </a>
                         </li>
                       </ul>
@@ -508,28 +682,23 @@ export default function Navbar() {
 
                     {/* Database Dropdown Content */}
                     <div>
-                      <h3 className="font-bold text-xl">Database</h3>
+                      <h3 className="font-bold">Database</h3>
                       <ul>
                         <li>
                           <a
                             href="https://www.mongodb.com"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="py-1  flex items-center gap-2"
+                            className="py-1 flex items-center gap-2"
                           >
-                            <SiMongodb />
+                            <Image
+                              src="https://i.ibb.co/X2JL6BY/mongodb.png"
+                              alt="MongoDB"
+                              width={16}
+                              height={16}
+                              className="w-4 h-4"
+                            />
                             MongoDB
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            href="https://mongoosejs.com"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="py-1  flex items-center gap-2"
-                          >
-                            <SiNpm />
-                            Mongoose
                           </a>
                         </li>
                         <li>
@@ -537,10 +706,67 @@ export default function Navbar() {
                             href="https://www.postgresql.org"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="py-1  flex items-center gap-2"
+                            className="py-1 flex items-center gap-2"
                           >
-                            <SiPostgresql />
+                            <Image
+                              src="https://i.ibb.co/SwQHDwN/Postgresql.png"
+                              alt="PostgresQL"
+                              width={16}
+                              height={16}
+                              className="w-4 h-4"
+                            />
                             PostgresQL
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="https://www.mysql.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="py-1 flex items-center gap-2"
+                          >
+                            <Image
+                              src="https://w7.pngwing.com/pngs/717/111/png-transparent-mysql-round-logo-tech-companies-thumbnail.png"
+                              alt="MySQL"
+                              width={16}
+                              height={16}
+                              className="w-4 h-4"
+                            />
+                            MySQL
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="https://firebase.google.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="py-1 flex items-center gap-2"
+                          >
+                            <Image
+                              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuawUuQCcq6fD-KpdmL4QixUOyqQqdrVNIDg&s"
+                              alt="Firebase"
+                              width={16}
+                              height={16}
+                              className="w-4 h-4"
+                            />
+                            Firebase
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="https://mongoosejs.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="py-1 flex items-center gap-2"
+                          >
+                            <Image
+                              src="https://i.ibb.co/3SdzPRZ/mongoose.png"
+                              alt="Mongoose"
+                              width={16}
+                              height={16}
+                              className="w-4 h-4"
+                            />
+                            Mongoose
                           </a>
                         </li>
                       </ul>
@@ -548,23 +774,132 @@ export default function Navbar() {
 
                     {/* UI/UX Design Dropdown Content */}
                     <div>
-                      <h3 className="font-bold text-xl">UI/UX Design</h3>
+                      <h3 className="font-bold">UI/UX Design</h3>
                       <ul>
                         <li>
-                          <a href="#" className="block py-1 ">
-                            Tell Us Your Requirements
+                          <a
+                            href="https://www.figma.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="py-1 flex items-center gap-2"
+                          >
+                            <Image
+                              src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Figma-logo.svg/1667px-Figma-logo.svg.png"
+                              alt="Figma"
+                              width={16}
+                              height={16}
+                              className="w-4 h-4"
+                            />
+                            Figma
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="https://www.adobe.com/products/xd.html"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="py-1 flex items-center gap-2"
+                          >
+                            <Image
+                              src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Adobe_XD_CC_icon.svg/2101px-Adobe_XD_CC_icon.svg.png"
+                              alt="Adobe XD"
+                              width={16}
+                              height={16}
+                              className="w-4 h-4"
+                            />
+                            Adobe XD
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="https://www.sketch.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="py-1 flex items-center gap-2"
+                          >
+                            <Image
+                              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3oCenqvw4j6W7oaiG2scIQiHcGC-FpTu63g&s"
+                              alt="Sketch"
+                              width={16}
+                              height={16}
+                              className="w-4 h-4"
+                            />
+                            Sketch
                           </a>
                         </li>
                       </ul>
                     </div>
 
-                    {/* WordPress Dropdown Content */}
+                    {/* CMS & E-commerce Dropdown Content */}
                     <div>
-                      <h3 className="font-bold text-xl">WordPress</h3>
+                      <h3 className="font-bold">CMS & E-commerce</h3>
                       <ul>
                         <li>
-                          <a href="#" className="block py-1 ">
-                            Tell Us Your Requirements
+                          <a
+                            href="https://wordpress.org"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="py-1 flex items-center gap-2"
+                          >
+                            <Image
+                              src="https://upload.wikimedia.org/wikipedia/commons/9/93/Wordpress_Blue_logo.png"
+                              alt="WordPress"
+                              width={16}
+                              height={16}
+                              className="w-4 h-4"
+                            />
+                            WordPress
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="https://www.shopify.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="py-1 flex items-center gap-2"
+                          >
+                            <Image
+                              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8gV071l8VQBqOvaWyMctGOQ7zD30Z77Swyg&s"
+                              alt="Shopify"
+                              width={16}
+                              height={16}
+                              className="w-4 h-4"
+                            />
+                            Shopify
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="https://business.adobe.com/products/magento/magento-commerce.html"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="py-1 flex items-center gap-2"
+                          >
+                            <Image
+                              src="https://w7.pngwing.com/pngs/1024/250/png-transparent-magento-e-commerce-logo-wordpress-miscellaneous-angle-company-thumbnail.png"
+                              alt="Magento"
+                              width={16}
+                              height={16}
+                              className="w-4 h-4"
+                            />
+                            Magento
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="https://webflow.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="py-1 flex items-center gap-2"
+                          >
+                            <Image
+                              src="https://img.icons8.com/color/512/webflow.png"
+                              alt="Web Flow"
+                              width={16}
+                              height={16}
+                              className="w-4 h-4"
+                            />
+                            Web Flow
                           </a>
                         </li>
                       </ul>
@@ -572,34 +907,47 @@ export default function Navbar() {
                   </div>
                 )}
               </div>
-
               <Link
                 href="/about"
                 onClick={() => setActiveLink("About ")}
-                className={`${activeLink === "About "
-                  ? "bg-white/20 text-white"
-                  : "text-white hover:bg-white/20 hover:text-white"
-                  } px-3 py-2 rounded-md  font-medium hidden lg:block`}
+                className={`${
+                  activeLink === "About "
+                    ? "bg-white/20 text-white"
+                    : "text-white hover:bg-white/20 hover:text-white"
+                } px-3 py-2 rounded-md  font-medium hidden lg:block`}
               >
                 About
               </Link>
               <Link
                 href="/projects"
                 onClick={() => setActiveLink("projects")}
-                className={`${activeLink === "projects"
-                  ? "bg-white/20 text-white"
-                  : "text-white hover:bg-white/20 hover:text-white"
-                  } px-3 py-2 rounded-md  font-medium hidden lg:block`}
+                className={`${
+                  activeLink === "projects"
+                    ? "bg-white/20 text-white"
+                    : "text-white hover:bg-white/20 hover:text-white"
+                } px-3 py-2 rounded-md  font-medium hidden lg:block`}
               >
                 Projects
               </Link>
               <Link
+                href="/pricing"
+                onClick={() => setActiveLink("pricing")}
+                className={`${
+                  activeLink === "pricing"
+                    ? "bg-white/20 text-white"
+                    : "text-white hover:bg-white/20 hover:text-white"
+                } px-3 py-2 rounded-md  font-medium hidden lg:block`}
+              >
+                Pricing
+              </Link>
+              <Link
                 href="/blogs"
                 onClick={() => setActiveLink("Blogs")}
-                className={`${activeLink === "Blogs"
-                  ? "bg-white/20 text-white"
-                  : "text-white hover:bg-white/20 hover:text-white"
-                  } px-3 py-2 rounded-md  font-medium hidden lg:block`}
+                className={`${
+                  activeLink === "Blogs"
+                    ? "bg-white/20 text-white"
+                    : "text-white hover:bg-white/20 hover:text-white"
+                } px-3 py-2 rounded-md  font-medium hidden lg:block`}
               >
                 Blogs & News
               </Link>
@@ -619,9 +967,24 @@ export default function Navbar() {
                 <Link
                   href="/about"
                   onClick={() => setActiveLink("About")}
-                  className={`block px-3 py-2 rounded-md font-medium ${activeLink === "About" ? "bg-gray-100 text-black" : "hover:bg-gray-200"}`}
+                  className={`block px-3 py-2 rounded-md font-medium ${
+                    activeLink === "About"
+                      ? "bg-gray-100 text-black"
+                      : "hover:bg-gray-200"
+                  }`}
                 >
                   About
+                </Link>
+                <Link
+                  href="/pricing"
+                  onClick={() => setActiveLink("pricing")}
+                  className={`block px-3 py-2 rounded-md font-medium ${
+                    activeLink === "pricing"
+                      ? "bg-gray-100 text-black"
+                      : "hover:bg-gray-200"
+                  }`}
+                >
+                  Pricing
                 </Link>
                 <a
                   href="/projects"
@@ -641,10 +1004,10 @@ export default function Navbar() {
             )}
           </div>
 
-          <div className="hidden sm:flex items-center sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+          <div className="hidden sm:flex items-center  sm:static sm:inset-auto sm:ml-6 sm:pr-0">
             <Link
               href={`/contactUs`}
-              className="flex items-center text-base py-2 gap-2 text-white mt-auto ml-5 border-2 border-[#c1c1c13c]  bg-gradient-to-r hover:bg-gradient-to-l hover:from-[#49156D] hover:to-[#691a86] hover:border-[#a33ed2] from-[#6C00A5] to-[#6A0170] duration-150 px-5 rounded-md"
+              className="flex items-center  text-base py-2 gap-2 text-white mt-auto ml-5 border-2 border-[#c1c1c13c]  bg-gradient-to-r hover:bg-gradient-to-l hover:from-[#49156D] hover:to-[#691a86] hover:border-[#a33ed2] from-[#6C00A5] to-[#6A0170] duration-150 px-5 rounded-md"
             >
               Contact Us{" "}
               <div>
@@ -659,10 +1022,10 @@ export default function Navbar() {
             </Link>
           </div>
 
-          <div className="sm:hidden flex items-center">
+          <div className="sm:hidden flex items-center ">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center z-50 justify-center p-2 rounded-md hover:bg-gradient-to-l from-[#49156D] to-[#49165C] text-white hover:border-[#c445ff] hover:from-[#6C00A5] hover:to-[#6A0170] duration-150 focus:ring-1 focus:ring-inset focus:ring-white"
+              className="inline-flex items-center  z-50 justify-center p-2 rounded-md hover:bg-gradient-to-l from-[#49156D] to-[#49165C] text-white hover:border-[#c445ff] hover:from-[#6C00A5] hover:to-[#6A0170] duration-150 focus:ring-1 focus:ring-inset focus:ring-white"
               aria-controls="mobile-menu"
               aria-expanded={isOpen}
             >
@@ -693,36 +1056,50 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       <div
-        className={`sm:hidden fixed top-0 left-0 w-full h-full bg-gradient-to-l from-[#36184bdd] to-[#49165C] text-white z-40 transition-transform ${isOpen ? "translate-x-0" : "-translate-x-full"}`}
+        className={`sm:hidden fixed top-0 left-0 w-full h-full bg-gradient-to-l from-[#36184bdd] to-[#49165C] text-white z-40 transition-transform ${
+          isOpen ? "translate-x-0" : "-translate-x-full"
+        }`}
       >
         <div className="flex justify-between items-center px-4 py-3 border-b border-gray-700">
           <h2 className="text-white text-lg font-bold">Menu</h2>
         </div>
         <div className="px-4 py-6 space-y-4">
           <a
-            href="#"
+            href="/"
             onClick={() => setActiveLink("home")}
-            className={`block px-3 py-2 rounded-md text-base font-medium ${activeLink === "home" ? "bg-gradient-to-l from-[#49156D] to-[#930087] text-white hover:border-[#c445ff] hover:from-[#6C00A5] hover:to-[#6A0170] duration-150"
-              :
-              "hover:bg-gradient-to-l from-[#49156D] to-[#49165C] text-white hover:border-[#c445ff] hover:from-[#6C00A5] hover:to-[#6A0170] duration-150"}`}
+            className={`block px-3 py-2 rounded-md text-base font-medium ${
+              activeLink === "home"
+                ? "bg-gradient-to-l from-[#49156D] to-[#930087] text-white hover:border-[#c445ff] hover:from-[#6C00A5] hover:to-[#6A0170] duration-150"
+                : "hover:bg-gradient-to-l from-[#49156D] to-[#49165C] text-white hover:border-[#c445ff] hover:from-[#6C00A5] hover:to-[#6A0170] duration-150"
+            }`}
           >
             Home
           </a>
           <div className="relative">
             <a
-              href="#"
+              href="/services"
               onClick={() => {
                 setActiveLink("services");
                 setDropdownOpenTech(!dropdownOpenTech); // Toggle services dropdown
               }}
-              className={`px-3 py-2 rounded-md text-base font-medium flex items-center justify-between ${activeLink === "services" ? "bg-gradient-to-l from-[#49156D] to-[#930087] text-white hover:border-[#c445ff] hover:from-[#6C00A5] hover:to-[#6A0170] duration-150" : "hover:bg-gradient-to-l from-[#49156D] to-[#49165C] text-white hover:border-[#c445ff] hover:from-[#6C00A5] hover:to-[#6A0170] duration-150"}`}
+              className={`px-3 py-2 rounded-md text-base font-medium flex items-center  justify-between ${
+                activeLink === "services"
+                  ? "bg-gradient-to-l from-[#49156D] to-[#930087] text-white hover:border-[#c445ff] hover:from-[#6C00A5] hover:to-[#6A0170] duration-150"
+                  : "hover:bg-gradient-to-l from-[#49156D] to-[#49165C] text-white hover:border-[#c445ff] hover:from-[#6C00A5] hover:to-[#6A0170] duration-150"
+              }`}
             >
               Services
-              <IoIosArrowDown className={`transform transition-transform duration-300 ${dropdownOpenTech ? "rotate-180" : ""}`} />
+              <IoIosArrowDown
+                className={`transform transition-transform duration-300 ${
+                  dropdownOpenTech ? "rotate-180" : ""
+                }`}
+              />
             </a>
 
             <div
-              className={`overflow-hidden transition-[max-height] duration-300 ease-in-out ${dropdownOpenTech ? "max-h-[500px]" : "max-h-0"}`}
+              className={`overflow-hidden transition-[max-height] duration-300 ease-in-out ${
+                dropdownOpenTech ? "max-h-[500px]" : "max-h-0"
+              }`}
             >
               <div className="backdrop-blur-3xl bg-[#381c4489] border-[#72006A] border-2 rounded-md text-white shadow-lg mt-2 p-4">
                 <ul className="space-y-2">
@@ -755,34 +1132,41 @@ export default function Navbar() {
 
           <div className="relative">
             <a
-              href="#"
+              href="/Technologies"
               onClick={() => {
                 setActiveLink("technologies");
                 setDropdownOpen(!dropdownOpen); // Toggle technologies dropdown
               }}
-              className={`px-3 py-2 rounded-md text-base font-medium flex items-center justify-between ${activeLink === "technologies" ? "bg-gradient-to-l from-[#49156D] to-[#930087] text-white hover:border-[#c445ff] hover:from-[#6C00A5] hover:to-[#6A0170] duration-150" : "hover:bg-gradient-to-l from-[#49156D] to-[#49165C] text-white hover:border-[#c445ff] hover:from-[#6C00A5] hover:to-[#6A0170] duration-150"}`}
+              className={`px-3 py-2 rounded-md text-base font-medium flex items-center  justify-between ${
+                activeLink === "technologies"
+                  ? "bg-gradient-to-l from-[#49156D] to-[#930087] text-white hover:border-[#c445ff] hover:from-[#6C00A5] hover:to-[#6A0170] duration-150"
+                  : "hover:bg-gradient-to-l from-[#49156D] to-[#49165C] text-white hover:border-[#c445ff] hover:from-[#6C00A5] hover:to-[#6A0170] duration-150"
+              }`}
             >
               Technologies
-              <IoIosArrowDown className={`transform ${dropdownOpen ? "rotate-180" : ""}`} />
+              <IoIosArrowDown
+                className={`transform ${dropdownOpen ? "rotate-180" : ""}`}
+              />
             </a>
             <div
-              className={`transition-all duration-300 ease-out overflow-hidden ${dropdownOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
-                } backdrop-blur-3xl bg-[#381c4489] border-[#72006A] border-2 rounded-md text-white shadow-lg`}
+              className={`transition-all duration-300 ease-out overflow-hidden ${
+                dropdownOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+              } backdrop-blur-3xl bg-[#381c4489] border-[#72006A] border-2 rounded-md text-white shadow-lg`}
             >
               {/* Adjust grid-cols for responsiveness */}
               <div className="px-4 pt-2">
                 <h3 className="font-bold">MERN-Stack</h3>
                 <ul>
-                  <li className="flex items-center gap-2 relative cursor-pointer after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#942b8d] after:transition-all after:duration-300 hover:after:w-1/2">
+                  <li className="flex items-center  gap-2 relative cursor-pointer after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#942b8d] after:transition-all after:duration-300 hover:after:w-1/2">
                     <SiMongodb /> MongoDB
                   </li>
-                  <li className="flex items-center gap-2 relative cursor-pointer after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#942b8d] after:transition-all after:duration-300 hover:after:w-1/2">
+                  <li className="flex items-center  gap-2 relative cursor-pointer after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#942b8d] after:transition-all after:duration-300 hover:after:w-1/2">
                     <SiExpress /> Express JS
                   </li>
-                  <li className="flex items-center gap-2 relative cursor-pointer after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#942b8d] after:transition-all after:duration-300 hover:after:w-1/2">
+                  <li className="flex items-center  gap-2 relative cursor-pointer after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#942b8d] after:transition-all after:duration-300 hover:after:w-1/2">
                     <FaReact /> React JS
                   </li>
-                  <li className="flex items-center gap-2 relative cursor-pointer after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#942b8d] after:transition-all after:duration-300 hover:after:w-1/2">
+                  <li className="flex items-center  gap-2 relative cursor-pointer after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#942b8d] after:transition-all after:duration-300 hover:after:w-1/2">
                     <FaNode /> Node JS
                   </li>
                 </ul>
@@ -791,28 +1175,28 @@ export default function Navbar() {
               <div className="mt-2 px-4 pb-2">
                 <h3 className="font-bold">Front-End</h3>
                 <ul>
-                  <li className="flex items-center gap-2 relative cursor-pointer after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#942b8d] after:transition-all after:duration-300 hover:after:w-1/2">
+                  <li className="flex items-center  gap-2 relative cursor-pointer after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#942b8d] after:transition-all after:duration-300 hover:after:w-1/2">
                     <FaReact /> React JS
                   </li>
-                  <li className="flex items-center gap-2 relative cursor-pointer after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#942b8d] after:transition-all after:duration-300 hover:after:w-1/2">
+                  <li className="flex items-center  gap-2 relative cursor-pointer after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#942b8d] after:transition-all after:duration-300 hover:after:w-1/2">
                     <SiNextdotjs /> Next JS
                   </li>
-                  <li className="flex items-center gap-2 relative cursor-pointer after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#942b8d] after:transition-all after:duration-300 hover:after:w-1/2">
+                  <li className="flex items-center  gap-2 relative cursor-pointer after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#942b8d] after:transition-all after:duration-300 hover:after:w-1/2">
                     <IoLogoJavascript /> JavaScript
                   </li>
-                  <li className="flex items-center gap-2 relative cursor-pointer after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#942b8d] after:transition-all after:duration-300 hover:after:w-1/2">
+                  <li className="flex items-center  gap-2 relative cursor-pointer after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#942b8d] after:transition-all after:duration-300 hover:after:w-1/2">
                     <SiTypescript /> TypeScript
                   </li>
-                  <li className="flex items-center gap-2 relative cursor-pointer after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#942b8d] after:transition-all after:duration-300 hover:after:w-1/2">
+                  <li className="flex items-center  gap-2 relative cursor-pointer after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#942b8d] after:transition-all after:duration-300 hover:after:w-1/2">
                     <SiRedux /> Redux
                   </li>
-                  <li className="flex items-center gap-2 relative cursor-pointer after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#942b8d] after:transition-all after:duration-300 hover:after:w-1/2">
+                  <li className="flex items-center  gap-2 relative cursor-pointer after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#942b8d] after:transition-all after:duration-300 hover:after:w-1/2">
                     <SiTailwindcss /> Tailwind
                   </li>
-                  <li className="flex items-center gap-2 relative cursor-pointer after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#942b8d] after:transition-all after:duration-300 hover:after:w-1/2">
+                  <li className="flex items-center  gap-2 relative cursor-pointer after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#942b8d] after:transition-all after:duration-300 hover:after:w-1/2">
                     <FaBootstrap /> Bootstrap
                   </li>
-                  <li className="flex items-center gap-2 relative cursor-pointer after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#942b8d] after:transition-all after:duration-300 hover:after:w-1/2">
+                  <li className="flex items-center  gap-2 relative cursor-pointer after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#942b8d] after:transition-all after:duration-300 hover:after:w-1/2">
                     <SiMui /> Material UI
                   </li>
                 </ul>
@@ -820,32 +1204,57 @@ export default function Navbar() {
             </div>
           </div>
           <a
-            href="#"
+            href="/about"
             onClick={() => setActiveLink("about")}
-            className={`block px-3 py-2 rounded-md text-base font-medium ${activeLink === "about" ? "bg-gradient-to-l from-[#49156D] to-[#930087] text-white hover:border-[#c445ff] hover:from-[#6C00A5] hover:to-[#6A0170] duration-150" : "hover:bg-gradient-to-l from-[#49156D] to-[#49165C] text-white hover:border-[#c445ff] hover:from-[#6C00A5] hover:to-[#6A0170] duration-150"}`}
+            className={`block px-3 py-2 rounded-md text-base font-medium ${
+              activeLink === "about"
+                ? "bg-gradient-to-l from-[#49156D] to-[#930087] text-white hover:border-[#c445ff] hover:from-[#6C00A5] hover:to-[#6A0170] duration-150"
+                : "hover:bg-gradient-to-l from-[#49156D] to-[#49165C] text-white hover:border-[#c445ff] hover:from-[#6C00A5] hover:to-[#6A0170] duration-150"
+            }`}
           >
             About
           </a>
           <a
-            href="#"
+            href="/pricing"
+            onClick={() => setActiveLink("pricing")}
+            className={`block px-3 py-2 rounded-md text-base font-medium ${
+              activeLink === "pricing"
+                ? "bg-gradient-to-l from-[#49156D] to-[#930087] text-white hover:border-[#c445ff] hover:from-[#6C00A5] hover:to-[#6A0170] duration-150"
+                : "hover:bg-gradient-to-l from-[#49156D] to-[#49165C] text-white hover:border-[#c445ff] hover:from-[#6C00A5] hover:to-[#6A0170] duration-150"
+            }`}
+          >
+            Pricing
+          </a>
+
+          <a
+            href="/projects"
             onClick={() => setActiveLink("projects")}
-            className={`block px-3 py-2 rounded-md text-base font-medium ${activeLink === "projects" ? "bg-gradient-to-l from-[#49156D] to-[#930087] text-white hover:border-[#c445ff] hover:from-[#6C00A5] hover:to-[#6A0170] duration-150" : "hover:bg-gradient-to-l from-[#49156D] to-[#49165C] text-white hover:border-[#c445ff] hover:from-[#6C00A5] hover:to-[#6A0170] duration-150"}`}
+            className={`block px-3 py-2 rounded-md text-base font-medium ${
+              activeLink === "projects"
+                ? "bg-gradient-to-l from-[#49156D] to-[#930087] text-white hover:border-[#c445ff] hover:from-[#6C00A5] hover:to-[#6A0170] duration-150"
+                : "hover:bg-gradient-to-l from-[#49156D] to-[#49165C] text-white hover:border-[#c445ff] hover:from-[#6C00A5] hover:to-[#6A0170] duration-150"
+            }`}
           >
             Projects
           </a>
           <a
-            href="#"
+            href="/blogs"
             onClick={() => setActiveLink("blogs")}
-            className={`block px-3 py-2 rounded-md text-base font-medium ${activeLink === "blogs" ? "bg-gradient-to-l from-[#49156D] to-[#930087] text-white hover:border-[#c445ff] hover:from-[#6C00A5] hover:to-[#6A0170] duration-150" : "hover:bg-gradient-to-l from-[#49156D] to-[#49165C] text-white hover:border-[#c445ff] hover:from-[#6C00A5] hover:to-[#6A0170] duration-150"}`}
+            className={`block px-3 py-2 rounded-md text-base font-medium ${
+              activeLink === "blogs"
+                ? "bg-gradient-to-l from-[#49156D] to-[#930087] text-white hover:border-[#c445ff] hover:from-[#6C00A5] hover:to-[#6A0170] duration-150"
+                : "hover:bg-gradient-to-l from-[#49156D] to-[#49165C] text-white hover:border-[#c445ff] hover:from-[#6C00A5] hover:to-[#6A0170] duration-150"
+            }`}
           >
             Blogs & News
           </a>
           <div className="flex justify-center">
-            <button className="text-white border-2 py-2 border-[#c1c1c13c]  bg-gradient-to-r hover:bg-gradient-to-l hover:from-[#49156D] hover:to-[#691a86] hover:border-[#a33ed2] from-[#6C00A5] to-[#6A0170] duration-150 px-5 rounded-md">Choose Us</button>
+            <button className="text-white border-2 py-2 border-[#c1c1c13c]  bg-gradient-to-r hover:bg-gradient-to-l hover:from-[#49156D] hover:to-[#691a86] hover:border-[#a33ed2] from-[#6C00A5] to-[#6A0170] duration-150 px-5 rounded-md">
+              Choose Us
+            </button>
           </div>
         </div>
       </div>
-
     </nav>
   );
 }

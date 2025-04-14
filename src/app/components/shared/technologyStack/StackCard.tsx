@@ -6,7 +6,7 @@ import React from "react";
 const StackCard: React.FC<StackCardProps> = ({ stack }) => {
   return (
     <div
-      className="w-[300px] h-[400px] backdrop-blur-lg bg-[#0000000f] flex flex-col border-[#72006A] border-2 pt-2 rounded-2xl 
+      className="w-[330px] md:w-[300px] h-[400px] backdrop-blur-lg bg-[#0000000f] flex flex-col border-[#72006A] border-2 pt-2 rounded-2xl 
                  transform transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-xl  hover:text-white"
     >
       <h2 className="pt-4 pb-2 text-center font-bold">{stack.stack.name}</h2>
@@ -19,7 +19,7 @@ const StackCard: React.FC<StackCardProps> = ({ stack }) => {
               alt={""}
               width={24}
               height={24}
-              className="object-cover mr-2"
+              className="object-cover mr-2 rounded-full"
             />
             <p className="text-white">{item.name}</p>
           </div>

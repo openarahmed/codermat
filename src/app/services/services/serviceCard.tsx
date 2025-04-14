@@ -2,12 +2,59 @@
 import PrimaryBtn from "@/app/components/shared/customized-component/PrimaryBtn";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import { FaArrowDown } from "react-icons/fa";
 
 const ServiceCard = ({ service }: any) => {
+  const [isHovered, setIsHovered] = useState(false);
+  const [progress, setProgress] = useState(0);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+    // Reset progress and animate
+    setProgress(0);
+    const interval = setInterval(() => {
+      setProgress((prev) => {
+        if (prev >= 100) {
+          clearInterval(interval);
+          return 100;
+        }
+        return prev + 20; // Adjust this value for speed
+      });
+    }, 50); // Adjust timing for smoothness
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+    setProgress(0);
+  };
+
   return (
-    <div className="transform transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-xl backdrop-blur-md bg-[#2F1748] flex flex-col items-start border-l-0 border-t-0 border-[#5C099B] border-4 p-5 rounded-xl">
+    <div
+      className={`transform transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl backdrop-blur-md flex flex-col items-start border-l-0 border-t-0 border-[#5C099B] border-4 p-5 rounded-xl w-[330px] lg:w-[390px] mx-auto relative overflow-hidden ${
+        isHovered
+          ? "bg-gradient-to-bl from-[#500c56]  to-[#250644]"
+          : "bg-[#2F1748]/30"
+      }`}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
+      {/* Progress border for left side */}
+      {isHovered && (
+        <div
+          className="absolute left-0 top-0 h-full w-[4px] bg-[#5C099B]"
+          style={{ height: `${progress}%` }}
+        />
+      )}
+
+      {/* Progress border for top side */}
+      {isHovered && (
+        <div
+          className="absolute left-0 top-0 h-[4px] bg-[#5C099B]"
+          style={{ width: `${progress}%` }}
+        />
+      )}
+
       <Image
         className="w-14"
         src={service.image_url}

@@ -4,47 +4,49 @@ import React from "react";
 
 const AboutUs = () => {
   return (
-    <main className="text-white  bg-gradient-to-bl from-[#93239d] via-[#190b34] to-[#280d42]">
-      <h1 className="text-center font-bold text-4xl pt-32">
-        Our Story: Connecting Global Technology <br /> Needs with Expertise
+    <main className="text-white  bg-gradient-to-bl from-[#93239d] via-[#190b34] to-[#280d42] px-5">
+      <h1 className="text-center font-bold text-2xl md:text-4xl pt-20  md:pt-28">
+        Our Story: Connecting Global Technology{" "}
+        <br className="hidden md:block" /> Needs with Expertise
       </h1>
-
-      <div className=" py-20 px-8 max-w-7xl mx-auto">
+      <div className=" md:py-20 max-w-6xl mx-auto">
         {/* Top section */}
-        <section className="flex flex-col lg:flex-row justify-between items-start gap-10 mb-16">
+        <section className="flex flex-col md:flex-row justify-between items-start gap-10 mb-16">
           {/* Testimonial */}
-          <div className="bg-white/10 p-6 rounded-lg max-w-md">
-            <div className="flex items-center mb-4">
+          <div className=" p-6 rounded-lg max-w-md">
+            <div className="flex items-center mb-4 md:w-[300px] lg:w-full">
               <Image
-                src="https://www.infomazeelite.com/wp-content/uploads/2022/03/Hire-Dedicated-Development-Team.png"
+                src="https://i.postimg.cc/gJC17YhH/formal_done.png"
+                className="bg-white/10 pt-10 rounded-xl md:transform md:scale-x-[-1]"
                 alt="Next Image Description"
                 width={600}
                 height={400}
                 layout="intrinsic"
               />
-
             </div>
-            <p className="font-bold text-xl">
-              <span className="font-bold text-xl">Nayem</span> / CEO,{" "}
-              <span className="font-bold text-xl">CoderMat</span>
+
+            <p className="font-semibold text-xl text-center">
+              <span className="text-2xl font-bold">Shakil Ahmed</span>{" "}
+              <br className=" md:hidden" />
+              <span className="text-sm font-medium">Co-founder & CEO</span>
             </p>
           </div>
 
-          {/* Mission */}
+          {/* Mission Extrream*/}
           <div className="max-w-xl">
-            <h1 className="text-4xl font-bold mb-6">
+            <h1 className="text-2xl md:text-4xl font-bold mb-6">
               On a mission to empower teams
             </h1>
             <p className="mb-4">
-              At <span className="font-bold text-xl">CoderMat</span>, we are
-              committed to equipping businesses with the essential tools to
-              thrive in the digital landscape. Our primary focus is on creating
-              intuitive and user-friendly websites that establish a strong
-              online presence and facilitate easy interactions between your
-              customers and your brand. We believe that technology should serve
-              your needs, not complicate them. Our aim is to help your team
-              achieve its full potential by delivering a seamless digital
-              experience that promotes growth and engagement.
+              At <span className="font-bold">CoderMat</span>, we are committed
+              to equipping businesses with the essential tools to thrive in the
+              digital landscape. Our primary focus is on creating intuitive and
+              user-friendly websites that establish a strong online presence and
+              facilitate easy interactions between your customers and your
+              brand. We believe that technology should serve your needs, not
+              complicate them. Our aim is to help your team achieve its full
+              potential by delivering a seamless digital experience that
+              promotes growth and engagement.
             </p>
             <p className="mb-4">
               Our primary goal is to create engaging, high-quality websites. We
@@ -63,32 +65,34 @@ const AboutUs = () => {
             </p>
 
             {/* Statistics */}
-            <div className="grid grid-cols-2 gap-6 mt-8">
+            {/* <div className="grid grid-cols-2 gap-6 mt-8">
               <div>
-                <h2 className="text-3xl font-bold">2000</h2>
+                <h2 className="text-2xl md:text-3xl font-bold">2000</h2>
                 <p>Founded</p>
               </div>
               <div>
-                <h2 className="text-3xl font-bold">23K</h2>
+                <h2 className="text-2xl md:text-3xl font-bold">23K</h2>
                 <p>Employees</p>
               </div>
               <div>
-                <h2 className="text-3xl font-bold">203K</h2>
+                <h2 className="text-2xl md:text-3xl font-bold">203K</h2>
                 <p>Customers</p>
               </div>
               <div>
-                <h2 className="text-3xl font-bold">$409M</h2>
+                <h2 className="text-2xl md:text-3xl font-bold">$409M</h2>
                 <p>Raised</p>
               </div>
-            </div>
+            </div> */}
           </div>
         </section>
 
         {/* Bottom section */}
-        <section className="flex flex-col lg:flex-row items-start justify-items-end gap-10">
+        <section className="flex flex-col md:flex-row items-start justify-items-end gap-10">
           <div className="max-w-xl">
             <div>
-              <h2 className="text-3xl font-bold mb-6">Why Choose Us</h2>
+              <h2 className="text-2xl md:text-3xl font-bold mb-6">
+                Why Choose Us
+              </h2>
               <p className="mb-6 hidden">
                 We believe that collaboration is key to the success of any
                 project. Our process starts with understanding your goals,
@@ -127,7 +131,7 @@ const AboutUs = () => {
                 </li>
               </ul>
             </div>
-            <h2 className="text-3xl font-bold mb-6">Our Process</h2>
+            <h2 className="text-2xl md:text-3xl font-bold mb-6">Our Process</h2>
             <p className="mb-6">
               We believe that collaboration is essential for the success of any
               project. Our process begins with understanding your goals,
@@ -174,7 +178,7 @@ const AboutUs = () => {
             </p>
           </div>
           <div className="bg-white/10 p-6 rounded-lg max-w-md">
-            <div className="flex items-center mb-4">
+            <div className="flex items-center mb-4 md:w-[300px] lg:w-full">
               <Image
                 src="https://www.infomazeelite.com/wp-content/uploads/2022/03/Hire-Dedicated-Development-Team.png"
                 alt="Discord Logo"
@@ -183,24 +187,21 @@ const AboutUs = () => {
                 className="w-full"
                 layout="intrinsic"
               />
-
             </div>
             <p className="font-bold text-xl">
-              <span className="font-bold text-xl">Nayem</span> / CEO,{" "}
+              <span className="font-bold text-xl">Team</span>{" "}
               <span className="font-bold text-xl">CoderMat</span>
             </p>
           </div>
         </section>
       </div>
-      import Image from 'next/image';
-
       <Image
         src="https://i.postimg.cc/kgGNMLQ8/home14-bg4.png"
         alt="Background Image"
-        width={1200}   // You can adjust the width as needed
-        height={800}   // You can adjust the height as needed
-        className="w-full pt-14"  // Add the same class for styling
-        layout="intrinsic"  // This will keep the aspect ratio
+        width={1200} // You can adjust the width as needed
+        height={800} // You can adjust the height as needed
+        className="w-full" // Add the same class for styling
+        layout="intrinsic" // This will keep the aspect ratio
       />
     </main>
   );

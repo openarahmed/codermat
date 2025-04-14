@@ -12,16 +12,18 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
     project; // Ensure liveLink is available
 
   return (
-    <div className="md:w-[390px] md:h-[660px] w-[320px] mx-auto backdrop-blur-md bg-[#2b1d3469] flex flex-col items-start rounded-2xl text-white">
-      <Image
-        src={image}
-        alt={project_name}
-        width={390}
-        height={260}
-        className="rounded-t-2xl"
-        objectFit="cover"
-        priority
-      />
+    <div className="lg:w-[380px] h-[600px] md:h-[620px] lg:h-[580px] w-[330px] mx-auto backdrop-blur-md bg-[#2b1d3469] flex flex-col items-start rounded-2xl text-white hover:scale-105 transition-transform duration-300">
+      {/* Image container with hover zoom effect */}
+      <div className="overflow-hidden rounded-t-2xl">
+        <Image
+          src={image}
+          alt={project_name}
+          width={390}
+          height={260}
+          className="rounded-t-2xl h-[230px] object-cover hover:scale-110 transition-transform duration-300"
+          priority
+        />
+      </div>
       <div className="p-7">
         <h2 className="py-4 text-xl font-bold">{project_name}</h2>
         <div>
@@ -39,7 +41,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           </p>
         </div>
       </div>
-      <button className="mt-auto mb-5 ml-5 border-2 flex items-center gap-2 border-[#7272723c] bg-gradient-to-r from-[#49156D] to-[#49165C] hover:border-[#a33ed2] hover:from-[#6C00A5] hover:to-[#6A0170] duration-150 px-5 py-2 rounded-md bottom-5">
+      <button className="mt-auto mb-5 ml-5 border-2 flex items-center gap-2 border-[#7272723c] bg-gradient-to-r from-[#49156D] to-[#49165C] hover:border-[#a33ed2] hover:from-[#6C00A5] hover:to-[#6A0170] duration-150 px-5 py-2 rounded-md absolute -bottom-3">
         <Link
           href={`${liveLink}`}
           target="_blank"

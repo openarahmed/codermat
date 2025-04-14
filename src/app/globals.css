@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://rsms.me/inter/inter.css");
+body {
+  font-family: "Inter", sans-serif;
+}
 .roboto-regular {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
@@ -64,3 +68,65 @@ scrollbar {
   width: 12px;
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceSlow {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+.animate-zoom-in {
+  animation: zoomIn 1.5s ease-in-out forwards;
+}
+
+.animate-slide-up {
+  animation: slideUp 1.5s ease-in-out forwards;
+}
+
+.animate-slide-up-delayed {
+  animation: slideUp 2s ease-in-out 0.5s forwards;
+}
+
+.animate-bounce-slow {
+  animation: bounceSlow 2s infinite ease-in-out;
+}

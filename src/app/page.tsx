@@ -31,34 +31,50 @@ export default function Home() {
 
   return (
     <>
-      <section className="bg-gradient-to-bl md:pt-24 from-[#93239d] via-[#190b34] to-[#280d42] border-b">
-        <HeroSection />
+      <section
+        className="relative min-h-screen md:pt-24 border-b bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage:
+            "url('https://i.postimg.cc/hPDQGNGn/banner-final.jpg')",
+        }}
+      >
+        {/* Black overlay */}
+        <div className="absolute inset-0 bg-black opacity-60 z-0"></div>
+
+        {/* Content on top of the overlay */}
+        <div className="relative z-10">
+          <HeroSection />
+        </div>
       </section>
 
       <section className="bg-gradient-to-b from-[#21112E] via-[#280d42] to-[#280d42]">
         <Services />
       </section>
 
-      <section className="bg-gradient-to-t from-[#321544] to-[#20112E] border-b">
-        <ProjectDiscuss />
+      <section className="text-white bg-gradient-to-b from-[#181819] to-[#1F122A] border-b">
+        <WhyChooseUs />
+      </section>
+
+      <section className="bg-gradient-to-t from-[#181819] to-[#21122F]">
+        <div>
+          <OurWebDevelopmentProcess />
+        </div>
       </section>
 
       <section className="bg-gradient-to-t from-[#21122F] to-[#321544] border-b">
         <TechnologyStack />
       </section>
 
-      <section className="bg-gradient-to-t from-[#181819] to-[#21122F] border-b">
-        <div>
-          <OurWebDevelopmentProcess />
-        </div>
+      <section className="bg-gradient-to-t from-[#181819] to-[#240f35] text-white border-b">
+        <Projetcs />
       </section>
 
-      <section className="text-white bg-gradient-to-b from-[#181819] to-[#1F122A]">
-        <WhyChooseUs />
-      </section>
-
-      <section className="text-white bg-gradient-to-b from-[#181619] to-[#240F35]">
+      <section className="text-white bg-gradient-to-b from-[#181619] to-[#240F35] border-b">
         <Pricing />
+      </section>
+
+      <section className="bg-gradient-to-t from-[#321544] to-[#20112E] border-b">
+        <ProjectDiscuss />
       </section>
 
       {/* <section className="bg-gradient-to-t from-[#240f35] to-[#1F122A] text-white">
@@ -67,11 +83,7 @@ export default function Home() {
         </div>
       </section> */}
 
-      <section className="bg-gradient-to-t from-[#181819] to-[#240f35] text-white">
-        <Projetcs />
-      </section>
-
-      <section className="bg-gradient-to-t from-[#21122F] to-[#181819] text-white">
+      <section className="bg-gradient-to-t from-[#21122F] to-[#181819] text-white border-b">
         <FAQ />
       </section>
 
